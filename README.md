@@ -16,7 +16,7 @@
   <a href="docs/安裝與使用（Linux）.md#下載與核對"><img src="docs/images/download-linux.svg" width="187" height="76" alt="下載字在（Linux，x86_64）"></a>
 </p>
 
-<p align="center">版本 1.1.0｜發布日期 <發布當天填>｜<a href="https://github.com/zizai-ime/zizai-ime/releases/tag/v1.1.0">更新內容與 SHA-256</a>｜<a href="https://github.com/zizai-ime/zizai-ime/releases">各版更新內容</a></p>
+<p align="center">版本 1.1.0｜發布日期 2026-10-11｜<a href="https://github.com/zizai-ime/zizai-ime/releases/tag/v1.1.0">更新內容與 SHA-256</a>｜<a href="https://github.com/zizai-ime/zizai-ime/releases">各版更新內容</a></p>
 
 | 系統 | 需求 | 安裝說明 |
 |---|---|---|
