@@ -1,14 +1,14 @@
 # 字在隱私權政策
 
-最後更新：2026-10-10
+最後更新：2026-10-11
 
-本政策適用於字在的 macOS、Windows、Android 與 iOS 版，包含各平台的輸入法、鍵盤、設定介面與安裝程式。
+本政策適用於字在的 macOS、Windows、Linux、Android 與 iOS 版，包含各平台的輸入法、鍵盤、設定介面與安裝程式。
 
 ## 重點
 
 - 字在沒有把你打的字、詞庫、擴充字根表或記錄檔傳給字在開發小組的功能，也不回傳使用統計，不放廣告。
 - 電腦版的「字在設定」只在你按「檢查更新」或「下載並看改了哪些字」時連網：連到 GitHub 查字在與資料更新檔的最新版本、下載資料更新檔，請求裡沒有你的資料。不會自動檢查；匯入你自己下載的檔案也不連網。
-- 你的資料都存在你的電腦、手機或平板上，位置見本政策的「資料存在哪裡」、「Android 版」與「iOS 版」。macOS 與 Windows 版解除安裝不會刪除它們。
+- 你的資料都存在你的電腦、手機或平板上，位置見本政策的「資料存在哪裡」、「Android 版」與「iOS 版」。電腦版解除安裝不會刪除它們。
 - Android 版的設定與匯入的字根表，存在字在的 App 私有資料夾，不參與雲端備份與裝置間移轉；解除安裝時一起刪除。
 - iOS 版不要求「允許完整取用」，iOS 不讓字在的鍵盤連網。選項存在字在的 App 資料夾，不進 iCloud 與電腦的備份；刪除 App 時一起刪除。
 - Windows 版預設會在你的電腦上寫一份記錄檔，記下啟用、載入、錯誤這類事件，以及當時在用的 App 名稱；不記錄你打的字。
@@ -40,18 +40,20 @@
 
 下列資料都只存在你的電腦上：
 
-| 資料 | macOS | Windows |
-|---|---|---|
-| 我的詞庫、擴充字根表、符號設定 | `~/Library/Application Support/Zizai/` | `%APPDATA%\Zizai\` |
-| 輸入法的選項（例如以四碼或三碼為主） | macOS 的偏好設定（ `studio.mosil.inputmethod.zizai` ） | `%APPDATA%\Zizai\ime\settings.json` |
-| 匯入的資料更新檔、「接受測試更新檔」的設定 | `~/Library/Application Support/Zizai/data/` | `%APPDATA%\Zizai\ime\data\` |
-| 記錄檔 | 預設不寫（見下方） | `%LOCALAPPDATA%\Zizai\tsf.log` 與 `tsf.log.1` |
+| 資料 | macOS | Windows | Linux |
+|---|---|---|---|
+| 我的詞庫、擴充字根表、符號設定 | `~/Library/Application Support/Zizai/` | `%APPDATA%\Zizai\` | `~/.local/share/zizai/` |
+| 輸入法的選項（例如以四碼或三碼為主） | macOS 的偏好設定（ `studio.mosil.inputmethod.zizai` ） | `%APPDATA%\Zizai\ime\settings.json` | `~/.local/share/zizai/settings.json` |
+| 匯入的資料更新檔、「接受測試更新檔」的設定 | `~/Library/Application Support/Zizai/data/` | `%APPDATA%\Zizai\ime\data\` | `~/.local/share/zizai/data/` |
+| 記錄檔 | 預設不寫（見下方） | `%LOCALAPPDATA%\Zizai\tsf.log` 與 `tsf.log.1` | 不寫（見下方） |
 
+- Linux 的 `~/.local/share` 是預設位置；設了 `XDG_DATA_HOME` 時，改用它。
 - **Windows 的沙箱 App**：開始功能表的搜尋、市集 App 在沙箱裡執行，字在在那裡打字時也是在沙箱裡。為了在那些地方也能用你的詞庫，字在讓它們讀得到詞庫的快照（ `user.pack` ）、擴充字根表、選項、字根表清單與匯入的資料更新檔。詞庫的資料庫本身（ `user.db` ）不開放。也就是說，這些 App 技術上讀得到你的詞庫內容。
 - 資料存在你的電腦上，不代表經過加密，也不代表其他程式一定讀不到：有足夠權限的程式仍然可能讀取。你正在打字的 App 也收得到你送出的文字，那些 App 怎麼處理這些文字，字在無法控制。
 - 解除安裝不會刪除這些資料。不要了的話：
   - macOS：步驟見 [安裝與使用](docs/安裝與使用.md#解除安裝)。輸入法的選項要另外清除。
   - Windows：先關掉用過字在的 App，再刪除 `%APPDATA%\Zizai` 與 `%LOCALAPPDATA%\Zizai` 這兩個資料夾。之後再用字在，記錄檔會重新產生。
+  - Linux：刪除 `~/.local/share/zizai` 這個資料夾。每個使用者各有一份。
 - 你使用的備份、同步服務可能另外存了這些檔案的副本。
 
 ## 記錄檔
@@ -66,7 +68,11 @@
 - 每一行有時間、行程編號、執行緒編號，以及載入字在的 App 的執行檔名稱。**不記錄你打的字**，但從時間與 App 名稱看得出你在什麼時候用了哪些程式。
 - 檔案超過 1 MiB 時，舊的改名成 `tsf.log.1` ，再寫新的 `tsf.log` 。這是依大小換檔，不是過了幾天就刪除。
 
-兩個版本的記錄都不會自動送出。
+### Linux
+
+字在不寫記錄檔，也不記錄你打的字。讀不到設定檔、寫不進使用者資料夾這類錯誤，會在系統記錄（例如 systemd 的 journal）留一行訊息，可能含有檔案路徑與你的使用者名稱。
+
+各版本的記錄都不會自動送出。
 
 ## Android 版
 
