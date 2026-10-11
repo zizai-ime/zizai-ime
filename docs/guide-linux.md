@@ -16,7 +16,9 @@
 
 ## 下載與核對
 
-1. 到 [Releases](https://github.com/zizai-ime/zizai-ime/releases/latest) 下載。檔名裡有發行版的名稱：
+Linux 版的最新版本是 1.1.1，更新內容與 SHA-256 見 [字在 1.1.1](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.1.1)。
+
+1. 到 [字在 1.1.1](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.1.1) 下載。檔名裡有發行版的名稱：
 
    | 發行版 | 格式 | 檔名裡的字 |
    |---|---|---|
