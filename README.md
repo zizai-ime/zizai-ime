@@ -11,12 +11,12 @@
 ## 下載
 
 <p align="center">
-  <a href="https://github.com/zizai-ime/zizai-ime/releases/download/v1.1.0/ZiZai-Mac-Universal-1.1.0.zip"><img src="docs/images/download-macos.svg" width="187" height="76" alt="下載字在（macOS 13 以上）"></a>
+  <a href="https://github.com/zizai-ime/zizai-ime/releases/download/v1.1.1/ZiZai-Mac-Universal-1.1.1.zip"><img src="docs/images/download-macos.svg" width="187" height="76" alt="下載字在（macOS 13 以上）"></a>
   <a href="docs/guide-windows.md#下載"><img src="docs/images/download-windows.svg" width="187" height="76" alt="下載字在（Windows 10、11）"></a>
   <a href="docs/guide-linux.md#下載與核對"><img src="docs/images/download-linux.svg" width="187" height="76" alt="下載字在（Linux，x86_64）"></a>
 </p>
 
-<p align="center">版本 1.1.0｜發布日期 2026-10-11｜<a href="https://github.com/zizai-ime/zizai-ime/releases/tag/v1.1.0">更新內容與 SHA-256</a>｜<a href="https://github.com/zizai-ime/zizai-ime/releases">各版更新內容</a></p>
+<p align="center">版本 1.1.1｜發布日期 2026-10-11｜<a href="https://github.com/zizai-ime/zizai-ime/releases/tag/v1.1.1">更新內容與 SHA-256</a>｜<a href="https://github.com/zizai-ime/zizai-ime/releases">各版更新內容</a></p>
 
 | 系統 | 需求 | 安裝說明 |
 |---|---|---|

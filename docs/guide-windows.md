@@ -7,15 +7,15 @@
 ## 下載
 
 <p align="center">
-  <a href="https://github.com/zizai-ime/zizai-ime/releases/download/v1.1.0/ZiZai-Win-x64-1.1.0.zip"><img src="images/download-windows-x64.svg" width="187" height="76" alt="下載字在（Windows 10、11，64 位元）"></a>
-  <a href="https://github.com/zizai-ime/zizai-ime/releases/download/v1.1.0/ZiZai-Win-x86-1.1.0.zip"><img src="images/download-windows-x86.svg" width="187" height="76" alt="下載字在（Windows 10，32 位元）"></a>
+  <a href="https://github.com/zizai-ime/zizai-ime/releases/download/v1.1.1/ZiZai-Win-x64-1.1.1.zip"><img src="images/download-windows-x64.svg" width="187" height="76" alt="下載字在（Windows 10、11，64 位元）"></a>
+  <a href="https://github.com/zizai-ime/zizai-ime/releases/download/v1.1.1/ZiZai-Win-x86-1.1.1.zip"><img src="images/download-windows-x86.svg" width="187" height="76" alt="下載字在（Windows 10，32 位元）"></a>
 </p>
 
 - **64 位元**（大多數電腦）：Windows 10、11。32 位元的 App 也能用字在。
 - **32 位元**：32 位元的 Windows 10。
 - 不知道是哪一種：到「設定」→「系統」→「系統資訊」（Windows 10 是「關於」），看「系統類型」是「64 位元作業系統」還是「32 位元作業系統」。
 
-目前的版本是 1.1.0，更新內容與 SHA-256 見 [Releases](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.1.0)。
+目前的版本是 1.1.1，更新內容與 SHA-256 見 [Releases](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.1.1)。
 
 ## 系統需求
 
