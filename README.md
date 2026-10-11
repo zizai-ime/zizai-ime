@@ -4,22 +4,27 @@
 
 <h1 align="center">ZiZai 字在輸入法</h1>
 
-<p align="center">免費的 macOS／Windows 中文輸入法</p>
+<p align="center">免費的 macOS／Windows／Linux 中文輸入法</p>
 
 「字在」是以大易輸入法的字根為基礎，依字的部件與筆順重新拆碼的中文字根輸入法，為正體中文（繁體）設計。內建字根表，裝好就能打字；也能匯入自己的 `.cin` 字根表、補字、改輸入碼。
 
 ## 下載
 
 <p align="center">
-  <a href="https://github.com/zizai-ime/zizai-ime/releases/download/v1.1.0/ZiZai-Mac-Universal-1.1.0.zip"><img src="docs/images/download-macos.svg" width="229" height="76" alt="下載字在（macOS 13 以上）"></a>
-  <a href="https://github.com/zizai-ime/zizai-ime/releases/download/v1.1.0/ZiZai-Win-x64-1.1.0.zip"><img src="docs/images/download-windows-x64.svg" width="310" height="76" alt="下載字在（Windows 10、11，64 位元）"></a>
-  <a href="https://github.com/zizai-ime/zizai-ime/releases/download/v1.1.0/ZiZai-Win-x86-1.1.0.zip"><img src="docs/images/download-windows-x86.svg" width="310" height="76" alt="下載字在（Windows 10，32 位元）"></a>
+  <a href="https://github.com/zizai-ime/zizai-ime/releases/download/v1.1.0/ZiZai-Mac-Universal-1.1.0.zip"><img src="docs/images/download-macos.svg" width="187" height="76" alt="下載字在（macOS 13 以上）"></a>
+  <a href="docs/安裝與使用（Windows）.md#下載"><img src="docs/images/download-windows.svg" width="187" height="76" alt="下載字在（Windows 10、11）"></a>
+  <a href="docs/安裝與使用（Linux）.md#下載與核對"><img src="docs/images/download-linux.svg" width="187" height="76" alt="下載字在（Linux，x86_64）"></a>
 </p>
 
 <p align="center">版本 1.1.0｜發布日期 <發布當天填>｜<a href="https://github.com/zizai-ime/zizai-ime/releases/tag/v1.1.0">更新內容與 SHA-256</a>｜<a href="https://github.com/zizai-ime/zizai-ime/releases">各版更新內容</a></p>
 
-- **macOS**：macOS 13 以上，支援 Apple 晶片與 Intel。解壓縮後按兩下 `ZiZai.pkg` 安裝，見 [安裝與使用](docs/安裝與使用.md)。
-- **Windows**：Windows 10、11。64 位元與 32 位元的檔案不同，不知道是哪一種，見 [安裝與使用（Windows）](docs/安裝與使用（Windows）.md) 的系統需求。安裝程式與輸入法還沒有數位簽章，Windows 會跳出安全警告；請先照說明核對 SHA-256，再決定要不要安裝。開了「智慧型應用程式控制」或由公司、學校管理的電腦，可能裝不起來，或裝好了也用不了字在。
+| 系統 | 需求 | 安裝說明 |
+|---|---|---|
+| macOS | macOS 13 以上，支援 Apple 晶片與 Intel | [安裝與使用](docs/安裝與使用.md) |
+| Windows | Windows 10、11。64 位元與 32 位元的檔案不同，在安裝說明選 | [安裝與使用（Windows）](docs/安裝與使用（Windows）.md) |
+| Linux | x86_64。Ubuntu 24.04、26.04 與 Debian 13 用 `.deb` ，Fedora 43、44 用 `.rpm` ，其他發行版用 `.tar.gz` 。IBus 與 Fcitx5 都能用 | [安裝與使用（Linux）](docs/安裝與使用（Linux）.md) |
+
+Windows 版與 Linux 版還沒有數位簽章，安裝前請先照安裝說明核對 SHA-256。Windows 會跳出安全警告；開了「智慧型應用程式控制」或由公司、學校管理的電腦，可能裝不起來，或裝好了也用不了字在。
 
 ## 特色
 
@@ -37,7 +42,7 @@
 
 ## 安裝與使用
 
-macOS 見 [安裝與使用](docs/安裝與使用.md)，Windows 見 [安裝與使用（Windows）](docs/安裝與使用（Windows）.md)。
+macOS 見 [安裝與使用](docs/安裝與使用.md)，Windows 見 [安裝與使用（Windows）](docs/安裝與使用（Windows）.md)，Linux 見 [安裝與使用（Linux）](docs/安裝與使用（Linux）.md)。
 
 ## 問題與建議
 

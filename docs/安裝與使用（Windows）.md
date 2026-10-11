@@ -4,19 +4,29 @@
 
 **請先看這段**：Windows 版的安裝程式與輸入法還沒有數位簽章，Windows 會跳出安全警告。開了「智慧型應用程式控制」或由公司、學校管理的電腦，可能裝不起來，或裝好了也用不了字在（見「目前的限制」）。安裝前請先核對 SHA-256（「安裝」的第 2 步）。
 
+## 下載
+
+<p align="center">
+  <a href="https://github.com/zizai-ime/zizai-ime/releases/download/v1.1.0/ZiZai-Win-x64-1.1.0.zip"><img src="images/download-windows-x64.svg" width="187" height="76" alt="下載字在（Windows 10、11，64 位元）"></a>
+  <a href="https://github.com/zizai-ime/zizai-ime/releases/download/v1.1.0/ZiZai-Win-x86-1.1.0.zip"><img src="images/download-windows-x86.svg" width="187" height="76" alt="下載字在（Windows 10，32 位元）"></a>
+</p>
+
+- **64 位元**（大多數電腦）：Windows 10、11。32 位元的 App 也能用字在。
+- **32 位元**：32 位元的 Windows 10。
+- 不知道是哪一種：到「設定」→「系統」→「系統資訊」（Windows 10 是「關於」），看「系統類型」是「64 位元作業系統」還是「32 位元作業系統」。
+
+目前的版本是 1.1.0，更新內容與 SHA-256 見 [Releases](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.1.0)。
+
 ## 系統需求
 
-- Windows 10 或 11。64 位元與 32 位元下載的檔案不同：
-  - **64 位元的 Windows**（大多數電腦）：`ZiZai-Win-x64-<版本>.zip` 。32 位元的 App 也能用字在。
-  - **32 位元的 Windows 10**：`ZiZai-Win-x86-<版本>.zip` 。
-  - 不知道是哪一種：到「設定」→「系統」→「系統資訊」（Windows 10 是「關於」），看「系統類型」是「64 位元作業系統」還是「32 位元作業系統」。
+- Windows 10 或 11，64 位元與 32 位元的檔案不同（見「下載」）。
 - 「字在設定」要用 Microsoft Edge WebView2 。Windows 11 內建；沒有的話，安裝程式會連網下載安裝。
 - 實際測過的是 Windows 11 Pro（組建 26300，64 位元，含 32 位元的 App）與全新安裝的 Windows 10 專業版 22H2（64 位元與 32 位元）。更早的 Windows 10 沒有實測，能安裝不代表一定相容。
 - ARM64 的電腦還不支援，見「目前的限制」。
 
 ## 安裝
 
-1. 從 [下載頁](../README.md#下載) 下載符合電腦的檔案（見「系統需求」）。請只從 GitHub 上 `zizai-ime/zizai-ime` 的 [Releases](https://github.com/zizai-ime/zizai-ime/releases) 下載。
+1. 從上面的「下載」下載符合電腦的檔案。請只從 GitHub 上 `zizai-ime/zizai-ime` 的 [Releases](https://github.com/zizai-ime/zizai-ime/releases) 下載。
 2. 核對 SHA-256：在下載的資料夾空白處按右鍵，選「在終端機中開啟」（Windows 10 要按住 Shift 再按右鍵，選「在這裡開啟 PowerShell 視窗」），執行下面這行（ `<檔名>` 換成下載的檔名），把 Hash 欄的值和 Releases 頁面上的 SHA-256 比對：
 
    ```powershell
