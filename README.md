@@ -22,7 +22,7 @@
 |---|---|---|---|
 | macOS | [1.1.1](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.1.1) | macOS 13 以上，支援 Apple 晶片與 Intel | [安裝與使用](docs/guide-macos.md) |
 | Windows | [1.1.1](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.1.1) | Windows 10、11。64 位元與 32 位元的檔案不同，在安裝說明選 | [安裝與使用（Windows）](docs/guide-windows.md) |
-| Linux | [1.1.1](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.1.1) | x86_64。Ubuntu 24.04、26.04 與 Debian 13 用 `.deb` ，Fedora 43、44 用 `.rpm` ，其他發行版用 `.tar.gz` 。IBus 與 Fcitx5 都能用 | [安裝與使用（Linux）](docs/guide-linux.md) |
+| Linux | [1.1.2](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.1.2) | x86_64。Ubuntu 24.04、26.04 與 Debian 13 用 `.deb` ，Fedora 43、44 用 `.rpm` ，其他發行版用 `.tar.gz` 。IBus 與 Fcitx5 都能用 | [安裝與使用（Linux）](docs/guide-linux.md) |
 
 Windows 版與 Linux 版還沒有數位簽章，安裝前請先照安裝說明核對 SHA-256。Windows 會跳出安全警告；開了「智慧型應用程式控制」或由公司、學校管理的電腦，可能裝不起來，或裝好了也用不了字在。
 
