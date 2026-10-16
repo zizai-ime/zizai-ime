@@ -4,7 +4,7 @@
 
 <h1 align="center">ZiZai 字在輸入法</h1>
 
-<p align="center">免費的 macOS／Windows／Linux 中文輸入法</p>
+<p align="center">免費的 macOS／Windows／Linux／Android／iOS 中文輸入法</p>
 
 「字在」是以大易輸入法的字根為基礎，依字的部件與筆順重新拆碼的中文字根輸入法，為正體中文（繁體）設計。內建字根表，裝好就能打字；也能匯入自己的 `.cin` 字根表、補字、改輸入碼。
 
@@ -16,13 +16,17 @@
   <a href="docs/guide-linux.md#下載與核對"><img src="docs/images/download-linux.svg" width="187" height="76" alt="下載字在（Linux，x86_64）"></a>
 </p>
 
-<p align="center">版本見下表｜<a href="https://github.com/zizai-ime/zizai-ime/releases">各版更新內容</a></p>
+<p align="center">手機與平板：<a href="https://play.google.com/store/apps/details?id=studio.mosil.ime.zizai">Google Play</a>（Android 8 以上）｜<a href="https://apps.apple.com/tw/app/%E5%AD%97%E5%9C%A8-%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95/id6821223548">App Store</a>（iPhone、iPad）</p>
+
+<p align="center">版本見下表｜<a href="https://github.com/zizai-ime/zizai-ime/releases">電腦版各版更新內容</a></p>
 
 | 系統 | 版本 | 需求 | 安裝說明 |
 |---|---|---|---|
 | macOS | [1.1.1](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.1.1) | macOS 13 以上，支援 Apple 晶片與 Intel | [安裝與使用](docs/guide-macos.md) |
 | Windows | [1.1.1](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.1.1) | Windows 10、11。64 位元與 32 位元的檔案不同，在安裝說明選 | [安裝與使用（Windows）](docs/guide-windows.md) |
 | Linux | [1.1.2](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.1.2) | x86_64。Ubuntu 24.04、26.04 與 Debian 13 用 `.deb` ，Fedora 43、44 用 `.rpm` ，其他發行版用 `.tar.gz` 。IBus 與 Fcitx5 都能用 | [安裝與使用（Linux）](docs/guide-linux.md) |
+| Android | [1.0.0](https://play.google.com/store/apps/details?id=studio.mosil.ime.zizai) | Android 8 以上 | 從 Google Play 安裝，打開字在照畫面上的步驟設定 |
+| iPhone、iPad | [1.0.0](https://apps.apple.com/tw/app/%E5%AD%97%E5%9C%A8-%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95/id6821223548) | iOS 17、iPadOS 17 以上 | 從 App Store 安裝，打開字在照畫面上的步驟設定 |
 
 Windows 版與 Linux 版還沒有數位簽章，安裝前請先照安裝說明核對 SHA-256。Windows 會跳出安全警告；開了「智慧型應用程式控制」或由公司、學校管理的電腦，可能裝不起來，或裝好了也用不了字在。
 
@@ -42,7 +46,7 @@ Windows 版與 Linux 版還沒有數位簽章，安裝前請先照安裝說明�
 
 ## 安裝與使用
 
-macOS 見 [安裝與使用](docs/guide-macos.md)，Windows 見 [安裝與使用（Windows）](docs/guide-windows.md)，Linux 見 [安裝與使用（Linux）](docs/guide-linux.md)。
+macOS 見 [安裝與使用](docs/guide-macos.md)，Windows 見 [安裝與使用（Windows）](docs/guide-windows.md)，Linux 見 [安裝與使用（Linux）](docs/guide-linux.md)。Android 與 iPhone、iPad 從 Google Play、App Store 安裝，打開字在照畫面上的步驟設定。
 
 ## 問題與建議
 
