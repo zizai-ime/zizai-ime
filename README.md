@@ -16,7 +16,10 @@
   <a href="docs/guide-linux.md#下載與核對"><img src="docs/images/download-linux.svg" width="187" height="76" alt="下載字在（Linux，x86_64）"></a>
 </p>
 
-<p align="center">手機與平板：<a href="https://play.google.com/store/apps/details?id=studio.mosil.ime.zizai">Google Play</a>（Android 8 以上）｜<a href="https://apps.apple.com/tw/app/%E5%AD%97%E5%9C%A8-%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95/id6821223548">App Store</a>（iPhone、iPad）</p>
+<p align="center">
+  <a href="https://apps.apple.com/tw/app/%E5%AD%97%E5%9C%A8-%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95/id6821223548"><img src="docs/images/badge-app-store.svg" width="152" height="56" alt="在 App Store 下載字在（iPhone、iPad）"></a>&emsp;
+  <a href="https://play.google.com/store/apps/details?id=studio.mosil.ime.zizai"><img src="docs/images/badge-google-play.png" width="188" height="56" alt="在 Google Play 下載字在（Android）"></a>
+</p>
 
 <p align="center">版本見下表｜<a href="https://github.com/zizai-ime/zizai-ime/releases">電腦版各版更新內容</a></p>
 
@@ -64,5 +67,7 @@ macOS 見 [安裝與使用](docs/guide-macos.md)，Windows 見 [安裝與使用�
 - 字頻：國家教育研究院〈民國112年語料字頻表〉（《解讀媒體字詞：新聞與社群媒體用語調查（112年）》附錄 1），只使用「字」與「字頻」兩欄。國家教育研究院未參與本產品，亦不代表其建議、認可或贊同。
 - 圖示裡的「字」：思源黑體 TC（SIL Open Font License 1.1）轉出的外框。
 - 其他第三方元件的授權聲明隨安裝檔附上。
+
+Apple 與 Apple 標誌是 Apple Inc. 在美國及其他國家和地區註冊的商標，App Store 是 Apple Inc. 的服務標誌。Google Play 和 Google Play 標誌是 Google LLC 的商標。
 
 © 2026 字在開發小組
