@@ -31,7 +31,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: 安裝建置用的套件
-        run: python -m pip install --require-hashes --only-binary :all: -r site/requirements.txt
+        run: python -m pip install --require-hashes --only-binary ":all:" -r site/requirements.txt
       - name: 建置
         run: python site/build.py --out _site
       - name: 檢查
