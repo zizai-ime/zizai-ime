@@ -116,9 +116,17 @@ def main() -> int:
             errors.append(f"{name}: 沒有 <title>")
         if not d:
             errors.append(f"{name}: 沒有摘要")
-        if len(p.canonical) != 1 or not p.canonical[0].startswith(site_url):
+        if name == "404.html":
+            # 找不到網頁的頁面：不要 canonical，要 noindex。
+            if p.canonical or p.meta.get("og:url"):
+                errors.append(f"{name}: 不該有 canonical 或 og:url")
+            if "noindex" not in (p.meta.get("robots") or [""])[0]:
+                errors.append(f"{name}: 沒有 noindex")
+        elif len(p.canonical) != 1 or not p.canonical[0].startswith(site_url):
             errors.append(f"{name}: canonical 不對：{p.canonical}")
-        for key in ("og:title", "og:description", "og:url", "og:image"):
+        keys = ("og:title", "og:description", "og:image") if name == "404.html" else (
+            "og:title", "og:description", "og:url", "og:image")
+        for key in keys:
             if not p.meta.get(key):
                 errors.append(f"{name}: 沒有 {key}")
         if t in titles:
@@ -127,6 +135,12 @@ def main() -> int:
             errors.append(f"{name}: 摘要和 {descs[d]} 重複")
         titles[t] = name
         descs[d] = name
+
+    if "404.html" not in pages:
+        errors.append("沒有 404.html")
+    for f in out.rglob("*.html"):
+        if "site:hide" in (text := f.read_text(encoding="utf-8")) or "site:show" in text:
+            errors.append(f"{f.relative_to(out)}: 還留著官網用的標記")
 
     home = pages.get("index.html")
     if home is None:

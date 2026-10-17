@@ -209,7 +209,7 @@ def wrap_tables(body: str) -> str:
     return body.replace("</table>", "</table></div>")
 
 
-def nav_html(cfg: Config, current: Page) -> str:
+def nav_html(cfg: Config, current: Page | None) -> str:
     items = []
     for p in cfg.pages:
         if not p.nav:
@@ -241,22 +241,33 @@ def json_ld(cfg: Config, page: Page) -> str:
     return f'<script type="application/ld+json">\n{text}\n</script>'
 
 
-def render_page(cfg: Config, md: MarkdownIt, rw: LinkRewriter, tpl: Template, page: Page) -> str:
-    src = (REPO / page.source).read_text(encoding="utf-8")
-    body = wrap_tables(rw.rewrite(page.source, md.render(src)))
+SHOW_RE = re.compile(r"<!-- site:show (.*?) -->", re.S)
+HIDE_RE = re.compile(r"<!-- site:hide -->.*?<!-- /site:hide -->\n?", re.S)
+
+
+def site_markers(body: str) -> str:
+    """README 裡給官網用的標記（HTML 註解，GitHub 上看不到）：
+    site:hide 到 /site:hide 之間的內容官網不顯示；site:show 裡的 HTML 只在官網顯示。"""
+    body = HIDE_RE.sub("", body)
+    return SHOW_RE.sub(lambda m: m.group(1), body)
+
+
+def render_html(cfg: Config, tpl: Template, page: Page, body: str, *,
+                canonical: bool = True, current: Page | None = None,
+                extra: list[str] | None = None) -> str:
     is_home = page.path == ""
     full_title = page.title if is_home else f"{page.title}｜{cfg.site_name}"
-    canonical = cfg.site_url + page.path
-    extra = []
-    if is_home:
-        extra.append(f'<meta name="apple-itunes-app" content="app-id={cfg.app_store_id}">')
-        extra.append(json_ld(cfg, page))
     e = lambda s: html.escape(s, quote=True)  # noqa: E731
+    url = cfg.site_url + page.path
+    canonical_tags = (
+        f'<link rel="canonical" href="{e(url)}">\n<meta property="og:url" content="{e(url)}">'
+        if canonical else '<meta name="robots" content="noindex">'
+    )
     return tpl.substitute(
         lang=e(cfg.lang),
         title=e(full_title),
         description=e(page.description),
-        canonical=e(canonical),
+        canonical_tags=canonical_tags,
         og_type="website" if is_home else "article",
         og_title=e(page.title),
         og_image=e(cfg.site_url + cfg.og_image),
@@ -265,14 +276,40 @@ def render_page(cfg: Config, md: MarkdownIt, rw: LinkRewriter, tpl: Template, pa
         og_image_alt=e(cfg.og_image_alt),
         site_name=e(cfg.site_name),
         base=e(cfg.base_path),
-        extra_head="\n".join(extra),
-        nav=nav_html(cfg, page),
+        extra_head="\n".join(extra or []),
+        nav=nav_html(cfg, current),
         body=body,
         page_class="home" if is_home else "doc",
         repo_url=e(cfg.repo_url),
         privacy_url=e(cfg.base_path + "privacy/"),
         terms_url=e(cfg.base_path + "terms/"),
     )
+
+
+def render_page(cfg: Config, md: MarkdownIt, rw: LinkRewriter, tpl: Template, page: Page) -> str:
+    src = (REPO / page.source).read_text(encoding="utf-8")
+    body = wrap_tables(rw.rewrite(page.source, site_markers(md.render(src))))
+    extra = []
+    if page.path == "":
+        extra.append(f'<meta name="apple-itunes-app" content="app-id={cfg.app_store_id}">')
+        extra.append(json_ld(cfg, page))
+    return render_html(cfg, tpl, page, body, current=page, extra=extra)
+
+
+def render_404(cfg: Config, tpl: Template) -> str:
+    """找不到網頁時 GitHub Pages 顯示的頁面。連結都用絕對路徑，在任何深度都能用。"""
+    page = Page(source="", path="404.html", title="找不到這一頁",
+                description="找不到這一頁。可以從首頁或各平台的安裝與使用找你要的內容。", nav=None)
+    links = "\n".join(
+        f'<li><a href="{html.escape(cfg.base_path + p.path)}">{html.escape(p.title)}</a></li>'
+        for p in cfg.pages if p.nav
+    )
+    body = (
+        "<h1>找不到這一頁</h1>\n"
+        "<p>這個網址沒有網頁，可能是打錯了，或是網頁已經搬走。可以從下面的連結找你要的內容：</p>\n"
+        f"<ul>\n{links}\n</ul>\n"
+    )
+    return render_html(cfg, tpl, page, body, canonical=False)
 
 
 def write_sitemap(cfg: Config, out: Path) -> None:
@@ -308,6 +345,8 @@ def build(out: Path) -> list[str]:
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(render_page(cfg, md, rw, tpl, page), encoding="utf-8")
         written.append(str(dest.relative_to(out)))
+    (out / "404.html").write_text(render_404(cfg, tpl), encoding="utf-8")
+    written.append("404.html")
     write_sitemap(cfg, out)
 
     if rw.errors:

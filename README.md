@@ -1,6 +1,10 @@
+<!-- site:hide -->
+
 <p align="center">
   <img src="docs/images/app-icon.svg" width="128" height="128" alt="字在的圖示">
 </p>
+
+<!-- /site:hide -->
 
 <h1 align="center">ZiZai 字在輸入法</h1>
 
@@ -57,7 +61,7 @@ macOS 見 [安裝與使用](docs/guide-macos.md)，Windows 見 [安裝與使用�
 
 ## 使用條款與資料來源
 
-「字在」是免費的中文輸入法，但目前沒有開放原始碼，使用條款見 [LICENSE.md](LICENSE.md)。這個儲存庫只放說明文件；安裝檔在 [Releases](https://github.com/zizai-ime/zizai-ime/releases)，資料更新檔在 [zizai-ime/zizai-data](https://github.com/zizai-ime/zizai-data/releases)。
+「字在」是免費的中文輸入法，但目前沒有開放原始碼，<!-- site:hide -->使用條款見 [LICENSE.md](LICENSE.md)。這個儲存庫只放說明文件；<!-- /site:hide --><!-- site:show 見<a href="LICENSE.md">使用條款</a>。 -->安裝檔在 [Releases](https://github.com/zizai-ime/zizai-ime/releases)，資料更新檔在 [zizai-ime/zizai-data](https://github.com/zizai-ime/zizai-data/releases)。
 
 內建字根表以大易輸入法的字根為基礎，拆字碼由程式依字在的取碼規則、全字庫的部件與筆順資料，以及人工指定與調整的字根清單產生，不是任何輸入法廠商的官方字根表。字在與任何輸入法廠商沒有合作或隸屬關係，也未經其背書。
 
