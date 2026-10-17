@@ -60,6 +60,7 @@ class Config:
     og_image_width: int
     og_image_height: int
     og_image_alt: str
+    google_site_verification: str
     pages: list[Page]
 
 
@@ -84,6 +85,7 @@ def load_config() -> Config:
         og_image_width=int(raw["og_image_width"]),
         og_image_height=int(raw["og_image_height"]),
         og_image_alt=raw["og_image_alt"],
+        google_site_verification=raw.get("google_site_verification", "").strip(),
         pages=pages,
     )
 
@@ -292,6 +294,10 @@ def render_page(cfg: Config, md: MarkdownIt, rw: LinkRewriter, tpl: Template, pa
     extra = []
     if page.path == "":
         extra.append(f'<meta name="apple-itunes-app" content="app-id={cfg.app_store_id}">')
+        if cfg.google_site_verification:
+            # Search Console 的「HTML 標記」驗證：只放在首頁，驗證通過後要一直留著。
+            extra.append('<meta name="google-site-verification" content="'
+                         + html.escape(cfg.google_site_verification, quote=True) + '">')
         extra.append(json_ld(cfg, page))
     return render_html(cfg, tpl, page, body, current=page, extra=extra)
 

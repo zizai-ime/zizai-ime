@@ -1,5 +1,5 @@
 # 字在官網的設定。換網域時只改 site_url（基本路徑從它取）。
-site_url = "https://zizai-ime.github.io/zizai-ime/"
+site_url = "https://zizai.page/"
 site_name = "字在輸入法"
 lang = "zh-Hant-TW"
 repo_url = "https://github.com/zizai-ime/zizai-ime"
@@ -8,6 +8,8 @@ og_image = "assets/og-image.png"
 og_image_width = 1280
 og_image_height = 640
 og_image_alt = "字在的 App 圖示，旁邊寫著「ZiZai 字在輸入法」"
+# Search Console 驗證用的「HTML 標記」：只填 content 引號裡的值；空字串就不輸出。
+google_site_verification = ""
 
 # 每一頁：source 是儲存庫裡的來源檔，path 是網址（相對於 site_url，首頁是空字串）。
 # nav 有值的頁面會出現在頁首的選單。
