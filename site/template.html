@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="$lang">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>$title</title>
+<meta name="description" content="$description">
+<link rel="canonical" href="$canonical">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f3f5f8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10151e" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="$og_type">
+<meta property="og:site_name" content="$site_name">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:title" content="$og_title">
+<meta property="og:description" content="$description">
+<meta property="og:url" content="$canonical">
+<meta property="og:image" content="$og_image">
+<meta property="og:image:width" content="$og_image_width">
+<meta property="og:image:height" content="$og_image_height">
+<meta property="og:image:alt" content="$og_image_alt">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="${base}images/app-icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="${base}assets/style.css">
+$extra_head
+</head>
+<body class="$page_class">
+<a class="skip" href="#main">跳到內容</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="$base"><img src="${base}images/app-icon.svg" width="32" height="32" alt=""><span>字在輸入法</span></a>
+    <nav aria-label="網站選單">
+      <ul>
+$nav
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+<article class="content">
+$body
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="footer-links"><a href="$privacy_url">隱私權政策</a><a href="$terms_url">使用條款</a><a href="$repo_url">GitHub</a><a href="$repo_url/issues">問題回報</a></p>
+    <p class="site-privacy">這個網站不放追蹤程式，也不使用 Cookie，網頁不向其他網站載入字型、程式或樣式。網站放在 GitHub Pages，GitHub 會依它的<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">隱私權聲明</a>記錄連線資料，例如 IP 位址。字在本身怎麼處理資料，見<a href="$privacy_url">隱私權政策</a>。</p>
+    <p>© 2026 字在開發小組</p>
+  </div>
+</footer>
+</body>
+</html>

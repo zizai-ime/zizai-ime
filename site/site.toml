@@ -1,0 +1,80 @@
+# 字在官網的設定。換網域時只改 site_url（基本路徑從它取）。
+site_url = "https://zizai-ime.github.io/zizai-ime/"
+site_name = "字在輸入法"
+lang = "zh-Hant-TW"
+repo_url = "https://github.com/zizai-ime/zizai-ime"
+app_store_id = "6821223548"
+og_image = "assets/og-image.png"
+og_image_width = 1280
+og_image_height = 640
+og_image_alt = "字在的 App 圖示，旁邊寫著「ZiZai 字在輸入法」"
+
+# 每一頁：source 是儲存庫裡的來源檔，path 是網址（相對於 site_url，首頁是空字串）。
+# nav 有值的頁面會出現在頁首的選單。
+[[pages]]
+source = "README.md"
+path = ""
+title = "ZiZai 字在輸入法"
+description = "免費的 macOS／Windows／Linux／Android／iOS 中文輸入法。內建字根表，裝好就能打字。"
+nav = "首頁"
+
+[[pages]]
+source = "docs/guide-macos.md"
+path = "macos/"
+title = "安裝與使用（macOS）"
+description = "字在 macOS 版的安裝、切換輸入法、打字與選字、字根表、補字、版本與更新，以及解除安裝。"
+nav = "macOS"
+
+[[pages]]
+source = "docs/guide-windows.md"
+path = "windows/"
+title = "安裝與使用（Windows）"
+description = "字在 Windows 版的下載、核對 SHA-256、安裝、切換輸入法、字在設定、解除安裝與目前的限制。"
+nav = "Windows"
+
+[[pages]]
+source = "docs/guide-linux.md"
+path = "linux/"
+title = "安裝與使用（Linux）"
+description = "字在 Linux 版的下載與核對、安裝、加入輸入來源（IBus、Fcitx5）、移除與目前的限制。"
+nav = "Linux"
+
+[[pages]]
+source = "docs/guide-android.md"
+path = "android/"
+title = "安裝與使用（Android）"
+description = "字在 Android 版的系統需求、從 Google Play 安裝、打字與選字、外接鍵盤與目前的限制。"
+nav = "Android"
+
+[[pages]]
+source = "docs/guide-ios.md"
+path = "ios/"
+title = "安裝與使用（iPhone、iPad）"
+description = "字在 iPhone、iPad 版的系統需求、從 App Store 安裝、新增鍵盤、打字與選字與目前的限制。"
+nav = "iPhone、iPad"
+
+[[pages]]
+source = "docs/symbols.md"
+path = "symbols/"
+title = "符號字根表"
+description = "字在用符號鍵打中文標點、全形符號、數學符號與注音符號的按法。"
+nav = "符號表"
+
+[[pages]]
+source = "docs/faq.md"
+path = "faq/"
+title = "常見問題"
+description = "字在支援的系統、費用、隱私、資料更新、和其他輸入法的關係與回報問題的方式。"
+nav = "常見問題"
+
+[[pages]]
+source = "PRIVACY.md"
+path = "privacy/"
+title = "隱私權政策"
+description = "字在各平台的連網、不收集的資料、資料存放位置、記錄檔與聯絡方式。"
+
+[[pages]]
+source = "LICENSE.md"
+path = "terms/"
+title = "使用條款"
+description = "字在的使用條款：可以做與不可以做的事、隨附資料、資料更新檔、安全提示與不提供保證。"

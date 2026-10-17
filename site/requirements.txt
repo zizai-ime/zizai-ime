@@ -1,0 +1,10 @@
+# 官網建置用的套件，固定版本與雜湊值。本機與 GitHub Actions 用同一份：
+#   python3 -m pip install --require-hashes -r site/requirements.txt
+markdown-it-py==3.0.0 \
+    --hash=sha256:355216845c60bd96232cd8d8c40e8f9765cc86f46880e43a8fd22dc1a1a8cab1
+mdurl==0.1.2 \
+    --hash=sha256:84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8
+linkify-it-py==2.0.3 \
+    --hash=sha256:6bcbc417b0ac14323382aef5c5192c0075bf8a9d6b41820a2b66371eac6b6d79
+uc-micro-py==1.0.3 \
+    --hash=sha256:db1dffff340817673d7b466ec86114a9dc0e9d4d9b5ba229d9d60e5c12600cd5
