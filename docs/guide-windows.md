@@ -6,11 +6,11 @@
 
 ## 下載
 
-Windows 版的最新版本是 1.1.1，更新內容與 SHA-256 見 [字在 1.1.1](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.1.1)。
+Windows 版的最新版本是 1.1.3，更新內容與 SHA-256 見 [字在 1.1.3](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.1.3)。
 
 <p align="center">
-  <a href="https://github.com/zizai-ime/zizai-ime/releases/download/v1.1.1/ZiZai-Win-x64-1.1.1.zip"><img src="images/download-windows-x64.svg" width="187" height="76" alt="下載字在（Windows 10、11，64 位元）"></a>
-  <a href="https://github.com/zizai-ime/zizai-ime/releases/download/v1.1.1/ZiZai-Win-x86-1.1.1.zip"><img src="images/download-windows-x86.svg" width="187" height="76" alt="下載字在（Windows 10，32 位元）"></a>
+  <a href="https://github.com/zizai-ime/zizai-ime/releases/download/v1.1.3/ZiZai-Win-x64-1.1.3.zip"><img src="images/download-windows-x64.svg" width="187" height="76" alt="下載字在（Windows 10、11，64 位元）"></a>
+  <a href="https://github.com/zizai-ime/zizai-ime/releases/download/v1.1.3/ZiZai-Win-x86-1.1.3.zip"><img src="images/download-windows-x86.svg" width="187" height="76" alt="下載字在（Windows 10，32 位元）"></a>
 </p>
 
 - **64 位元**（大多數電腦）：Windows 10、11。32 位元的 App 也能用字在。

@@ -15,7 +15,7 @@
 ## 下載
 
 <p align="center">
-  <a href="https://github.com/zizai-ime/zizai-ime/releases/download/v1.1.1/ZiZai-Mac-Universal-1.1.1.zip"><img src="docs/images/download-macos.svg" width="187" height="76" alt="下載字在（macOS 13 以上）"></a>
+  <a href="https://github.com/zizai-ime/zizai-ime/releases/download/v1.1.3/ZiZai-Mac-Universal-1.1.3.zip"><img src="docs/images/download-macos.svg" width="187" height="76" alt="下載字在（macOS 13 以上）"></a>
   <a href="docs/guide-windows.md#下載"><img src="docs/images/download-windows.svg" width="187" height="76" alt="下載字在（Windows 10、11）"></a>
   <a href="docs/guide-linux.md#下載與核對"><img src="docs/images/download-linux.svg" width="187" height="76" alt="下載字在（Linux，x86_64）"></a>
 </p>
@@ -29,9 +29,9 @@
 
 | 系統 | 版本 | 需求 | 安裝說明 |
 |---|---|---|---|
-| macOS | [1.1.1](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.1.1) | macOS 13 以上，支援 Apple 晶片與 Intel | [安裝與使用](docs/guide-macos.md) |
-| Windows | [1.1.1](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.1.1) | Windows 10、11。64 位元與 32 位元的檔案不同，在安裝說明選 | [安裝與使用（Windows）](docs/guide-windows.md) |
-| Linux | [1.1.2](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.1.2) | x86_64。Ubuntu 24.04、26.04 與 Debian 13 用 `.deb` ，Fedora 43、44 用 `.rpm` ，其他發行版用 `.tar.gz` 。IBus 與 Fcitx5 都能用 | [安裝與使用（Linux）](docs/guide-linux.md) |
+| macOS | [1.1.3](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.1.3) | macOS 13 以上，支援 Apple 晶片與 Intel | [安裝與使用](docs/guide-macos.md) |
+| Windows | [1.1.3](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.1.3) | Windows 10、11。64 位元與 32 位元的檔案不同，在安裝說明選 | [安裝與使用（Windows）](docs/guide-windows.md) |
+| Linux | [1.1.3](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.1.3) | x86_64。Ubuntu 24.04、26.04 與 Debian 13 用 `.deb` ，Fedora 43、44 用 `.rpm` ，其他發行版用 `.tar.gz` 。IBus 與 Fcitx5 都能用 | [安裝與使用（Linux）](docs/guide-linux.md) |
 | Android | [1.0.0](https://play.google.com/store/apps/details?id=studio.mosil.ime.zizai) | Android 8 以上 | 從 Google Play 安裝，打開字在照畫面上的步驟設定 |
 | iPhone、iPad | [1.0.0](https://apps.apple.com/tw/app/%E5%AD%97%E5%9C%A8-%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95/id6821223548) | iOS 17、iPadOS 17 以上 | 從 App Store 安裝，打開字在照畫面上的步驟設定 |
 

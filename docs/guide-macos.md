@@ -8,7 +8,7 @@ macOS 13 以上。
 
 ## 安裝
 
-macOS 版的最新版本是 1.1.1，更新內容與 SHA-256 見 [字在 1.1.1](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.1.1)。
+macOS 版的最新版本是 1.1.3，更新內容與 SHA-256 見 [字在 1.1.3](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.1.3)。
 
 1. 從 [下載頁](../README.md#下載) 下載壓縮檔，解壓縮後按兩下 `ZiZai.pkg` 。Safari 預設會自動解壓縮，下載項目裡直接就是 `ZiZai.pkg` 。
 2. 按「繼續」。
