@@ -1,0 +1,5 @@
+{
+  "說明": "手機版在 Google Play、App Store 上架後，改這裡的版本號。字在 App 按「檢查更新」時會讀這個檔；網址只能是 Google Play 或 App Store 的。",
+  "android": { "version": "1.1.0", "url": "https://play.google.com/store/apps/details?id=studio.mosil.ime.zizai" },
+  "ios": { "version": "1.1.0", "url": "https://apps.apple.com/app/id6821223548" }
+}
