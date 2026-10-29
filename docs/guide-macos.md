@@ -13,36 +13,36 @@ macOS 版的最新版本是 1.3.0，更新內容與 SHA-256 見 [字在 1.3.0](h
 1. 從 [下載頁](../README.md#下載) 下載壓縮檔，解壓縮後按兩下 `ZiZai.pkg` 。Safari 預設會自動解壓縮，下載項目裡直接就是 `ZiZai.pkg` 。
 2. 按「繼續」。
 
-   <img src="images/install-1-continue.png" width="620" alt="安裝程式的第一頁，紅框標出「繼續」按鈕">
+   <img src="images/install-1-continue.png" width="620" alt="安裝程式的第一頁，要按的是右下角的「繼續」按鈕">
 
 3. 看過「軟體許可協議」（字在的使用條款與隱私權政策的重點），按「繼續」：
 
-   <img src="images/install-2-license.png" width="620" alt="「軟體許可協議」頁，顯示字在使用條款的開頭，紅框標出「繼續」按鈕">
+   <img src="images/install-2-license.png" width="620" alt="「軟體許可協議」頁，顯示字在使用條款的開頭，要按的是右下角的「繼續」按鈕">
 
    在跳出的視窗按「同意」（按「不同意」就不會安裝）：
 
-   <img src="images/install-3-agree.png" width="620" alt="要求同意軟體許可協議的視窗，紅框標出「同意」按鈕">
+   <img src="images/install-3-agree.png" width="620" alt="要求同意軟體許可協議的視窗，要按的是「同意」按鈕">
 
 4. 選「安裝供這部電腦的所有使用者使用」，按「繼續」。
 
-   <img src="images/install-4-destination.png" width="623" alt="選取目標頁，已選「安裝供這部電腦的所有使用者使用」，紅框標出「繼續」按鈕">
+   <img src="images/install-4-destination.png" width="623" alt="選取目標頁，已選「安裝供這部電腦的所有使用者使用」，要按的是右下角的「繼續」按鈕">
 
 5. 按「安裝」，輸入電腦的管理者密碼，裝好後按「關閉」。
 
-   <img src="images/install-5-install.png" width="623" alt="安裝類型頁，紅框標出「安裝」按鈕">
+   <img src="images/install-5-install.png" width="623" alt="安裝類型頁，要按的是右下角的「安裝」按鈕">
 
 6. 「系統設定」如果開著，先按 Command＋Q 結束它（它不會重新讀取輸入法清單）。
 7. 打開「系統設定」→「鍵盤」，按「輸入方式」右邊的「編輯⋯」。
 
-   <img src="images/install-6-keyboard-edit.png" width="505" alt="系統設定的鍵盤頁，紅框標出「輸入方式」右邊的「編輯⋯」按鈕">
+   <img src="images/install-6-keyboard-edit.png" width="505" alt="系統設定的鍵盤頁，要按的是「輸入方式」右邊的「編輯⋯」按鈕">
 
 8. 按左下角的「＋」。
 
-   <img src="images/install-7-add.png" width="640" alt="輸入方式的對話框，紅框標出左下角的「＋」">
+   <img src="images/install-7-add.png" width="640" alt="輸入方式的對話框，要按的是左下角的「＋」">
 
 9. 左邊選「繁體中文」，右邊選「字在」，按「加入」。
 
-   <img src="images/install-8-add-zizai.png" width="523" alt="加入輸入方式的清單，紅框標出「繁體中文」、「字在」與「加入」">
+   <img src="images/install-8-add-zizai.png" width="523" alt="加入輸入方式的清單，要選的是「繁體中文」底下的「字在」，再按「加入」">
 
 找不到「字在」或只看到一列空白時，請登出再登入（只重開「系統設定」不夠）。「字在設定」會一起裝在「應用程式」資料夾。
 
@@ -170,11 +170,11 @@ macOS 版 1.3.0 起，候選字的順序會依你的選字習慣慢慢調整；�
 
 1. 打開「系統設定」→「鍵盤」，按「輸入方式」右邊的「編輯⋯」。
 
-   <img src="images/uninstall-1-keyboard-edit.png" width="505" alt="系統設定的鍵盤頁，輸入方式是「ABC 和字在」，紅框標出「編輯⋯」按鈕">
+   <img src="images/uninstall-1-keyboard-edit.png" width="505" alt="系統設定的鍵盤頁，輸入方式是「ABC 和字在」，要按的是「編輯⋯」按鈕">
 
    選「字在」，按左下角的「−」移除。
 
-   <img src="images/uninstall-2-remove.png" width="640" alt="輸入方式的對話框，已選「字在」，紅框標出左下角的「−」">
+   <img src="images/uninstall-2-remove.png" width="640" alt="輸入方式的對話框，已選「字在」，要按的是左下角的「−」">
 
 2. 刪除下列項目（在 Finder 選「前往」→「前往檔案夾⋯」，輸入路徑；刪除時需要管理者密碼）：
    - `/Library/Input Methods/Zizai.app`
@@ -183,4 +183,4 @@ macOS 版 1.3.0 起，候選字的順序會依你的選字習慣慢慢調整；�
 3. 要清除輸入法選單的選項（例如以四碼或三碼為主），在「終端機」執行 `defaults delete studio.mosil.inputmethod.zizai` 。
 4. 登出再登入。
 
-本頁截圖裡的 macOS 介面屬於 Apple，用來說明安裝與使用的步驟；紅框與裁切是字在開發小組加的。
+本頁截圖裡的 macOS 介面屬於 Apple，用來說明安裝與使用的步驟；部分截圖經過裁切，是字在開發小組做的。

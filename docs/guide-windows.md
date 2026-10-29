@@ -36,36 +36,36 @@ Windows 版的最新版本是 1.3.0，更新內容與 SHA-256 見 [字在 1.3.0]
    不相同就不要安裝，刪掉重新下載。只看檔名不能確認內容。
 3. 在下載的檔案上按右鍵，選「解壓縮全部」（Windows 11 沒看到的話，先按「顯示其他選項」）：
 
-   <img src="images/win-install-1-extract-menu.png" width="286" alt="檔案總管的右鍵選單，紅框標出「解壓縮全部」">
+   <img src="images/win-install-1-extract-menu.png" width="286" alt="檔案總管的右鍵選單，要點的是「解壓縮全部」">
 
 4. 按「解壓縮」，會打開裡面有 `ZiZai.exe` 的資料夾：
 
-   <img src="images/win-install-2-extract-dialog.png" width="608" alt="「解壓縮壓縮 (Zipped) 資料夾」視窗，紅框標出「解壓縮」">
+   <img src="images/win-install-2-extract-dialog.png" width="608" alt="「解壓縮壓縮 (Zipped) 資料夾」視窗，要按的是「解壓縮」">
 
 5. 按兩下 `ZiZai.exe` 。如果出現「Windows 已保護您的電腦」，表示 Windows 無法用數位簽章確認發行者，不代表檔案一定安全，也不代表一定有害。確定是從上面的 Releases 下載、SHA-256 也相符，要安裝的話再按「其他資訊」：
 
-   <img src="images/win-install-3-smartscreen.png" width="528" alt="SmartScreen 的藍色視窗「Windows 已保護您的電腦」，紅框標出「其他資訊」">
+   <img src="images/win-install-3-smartscreen.png" width="528" alt="SmartScreen 的藍色視窗「Windows 已保護您的電腦」，要點的是「其他資訊」">
 
 6. 確認「應用程式」是 `ZiZai.exe` ，按「仍要執行」。不確定來源、雜湊值不符、出現其他威脅警告，或沒有「仍要執行」時，請停止安裝：
 
-   <img src="images/win-install-4-run-anyway.png" width="528" alt="SmartScreen 視窗顯示應用程式「ZiZai.exe」與「不明的發行者」，紅框標出「仍要執行」">
+   <img src="images/win-install-4-run-anyway.png" width="528" alt="SmartScreen 視窗顯示應用程式「ZiZai.exe」與「不明的發行者」，要按的是「仍要執行」">
 
 7. 「使用者帳戶控制」問是否允許變更時，按「是」。畫面和這裡寫的不同時，請停止。
 8. 按「下一步」：
 
-   <img src="images/win-install-5-welcome.png" width="598" alt="安裝精靈的歡迎頁「歡迎使用『字在』安裝精靈」，紅框標出「下一步」">
+   <img src="images/win-install-5-welcome.png" width="598" alt="安裝精靈的歡迎頁「歡迎使用『字在』安裝精靈」，要按的是「下一步」">
 
 9. 看過「使用條款」，選「我同意」再按「下一步」開始安裝。按「取消」就不會安裝：
 
-   <img src="images/win-install-6-terms.png" width="598" alt="安裝精靈的「使用條款」頁，紅框標出「我同意」與「下一步」">
+   <img src="images/win-install-6-terms.png" width="598" alt="安裝精靈的「使用條款」頁，要先選「我同意」，再按「下一步」">
 
 10. 看到「『字在』安裝完成」，按「完成」：
 
-   <img src="images/win-install-7-finish.png" width="598" alt="安裝精靈的完成頁，說明 Windows 沒有擋下時按 Win＋空白鍵切換到「字在」，紅框標出「完成」">
+   <img src="images/win-install-7-finish.png" width="598" alt="安裝精靈的完成頁，說明 Windows 沒有擋下時按 Win＋空白鍵切換到「字在」，要按的是「完成」">
 
 11. 「字在」會加進「繁體中文 (台灣)」的鍵盤清單。要確認的話：「設定」→「時間與語言」→「語言與地區」，按「繁體中文 (台灣)」右邊的「⋯」→「語言選項」，在「鍵盤」找「字在」（Windows 10 是「設定」→「時間與語言」→「語言」，點「繁體中文 (台灣)」再按「選項」）：
 
-   <img src="images/win-install-8-keyboard-list.png" width="673" alt="「語言選項」的「鍵盤」清單，紅框標出「字在　輸入法」">
+   <img src="images/win-install-8-keyboard-list.png" width="673" alt="「語言選項」的「鍵盤」清單，要找的是「字在　輸入法」">
 
    沒有「字在」時，按「已安裝的鍵盤」右邊的「新增鍵盤」（Windows 10 在「鍵盤」下面），選「字在」。
 
@@ -77,7 +77,7 @@ Windows 版的最新版本是 1.3.0，更新內容與 SHA-256 見 [字在 1.3.0]
 
 - 按 Win＋空白鍵，選「字在」：
 
-   <img src="images/win-switch-1-flyout.png" width="358" alt="Win＋空白鍵跳出的輸入法清單，紅框標出「繁體中文（台灣）字在」">
+   <img src="images/win-switch-1-flyout.png" width="358" alt="Win＋空白鍵跳出的輸入法清單，要選的是「繁體中文（台灣）字在」">
 
 - 切到「字在」後，工作列右下角會顯示「中」；按一下變成「英」，按鍵直接打英文，再按一下切回「中」：
 
@@ -98,7 +98,7 @@ Windows 版的最新版本是 1.3.0，更新內容與 SHA-256 見 [字在 1.3.0]
 
 1. 按「開始」，搜尋「字在設定」並打開：
 
-   <img src="images/win-settings-1-start-menu.png" width="808" alt="開始功能表搜尋「字在設定」，紅框標出「最佳比對」的「字在設定　應用程式」">
+   <img src="images/win-settings-1-start-menu.png" width="808" alt="開始功能表搜尋「字在設定」，要點的是「最佳比對」的「字在設定　應用程式」">
 
 2. 「首頁」（版本與更新）和「我的詞庫」「擴充字根表」「符號」「查碼」的用法和 macOS 版相同，見 [安裝與使用](guide-macos.md) 的「標點與符號」到「版本與更新」各節。自己下載的資料更新檔（ `.zizaipack` ）也可以在檔案總管裡按兩下匯入。
 
@@ -138,15 +138,15 @@ Windows 版的最新版本是 1.3.0，更新內容與 SHA-256 見 [字在 1.3.0]
 
 1. 「設定」→「應用程式」→「已安裝的應用程式」，搜尋「字在」，按右邊的「⋯」→「解除安裝」，再按一次「解除安裝」（Windows 10 是「設定」→「應用程式」→「應用程式與功能」，點「字在」，按「解除安裝」，再按一次「解除安裝」確認）：
 
-   <img src="images/win-uninstall-1-apps.png" width="670" alt="「已安裝的應用程式」裡的「字在」，紅框標出選單的「解除安裝」">
+   <img src="images/win-uninstall-1-apps.png" width="670" alt="「已安裝的應用程式」裡的「字在」，要點的是選單的「解除安裝」">
 
 2. 「使用者帳戶控制」按「是」。問「確定要移除『字在』嗎？」時按「是」（只移除程式）：
 
-   <img src="images/win-uninstall-2-confirm.png" width="391" alt="解除安裝的確認視窗「確定要移除『字在』嗎？只會移除程式」，紅框標出「是」">
+   <img src="images/win-uninstall-2-confirm.png" width="391" alt="解除安裝的確認視窗「確定要移除『字在』嗎？只會移除程式」，要按的是「是」">
 
 3. 看到「已經從這台電腦移除『字在』。」，按「確定」。還有 App 正在用字在時，訊息是「『字在』解除安裝完成」，並多一行「有些項目無法移除」，指的是那些 App 正在用的檔案，重新開機時會自動刪除：
 
-   <img src="images/win-uninstall-3-done.png" width="259" alt="解除安裝完成的訊息「已經從這台電腦移除『字在』。」，紅框標出「確定」">
+   <img src="images/win-uninstall-3-done.png" width="259" alt="解除安裝完成的訊息「已經從這台電腦移除『字在』。」，要按的是「確定」">
 
 解除安裝會刪掉 `C:\Program Files\Zizai` 、開始功能表的「字在設定」，並從鍵盤清單移除「字在」。詞庫、擴充字根表、設定與匯入的資料更新檔（ `%APPDATA%\Zizai` ），以及記錄檔（ `%LOCALAPPDATA%\Zizai` 的 `tsf.log` 與 `tsf.log.1` ）會留著，重新安裝後還能用。不要了的話，關掉用過字在的 App，再刪掉這兩個資料夾，見 [隱私權政策](../PRIVACY.md)。
 
@@ -165,4 +165,4 @@ Windows 版的最新版本是 1.3.0，更新內容與 SHA-256 見 [字在 1.3.0]
 
 遇到問題請到 GitHub 的 [Issues](https://github.com/zizai-ime/zizai-ime/issues) 回報。Issues 是公開的：不要貼記錄檔的原文，也不要上傳 `user.db` 、`user.pack` 或含個人資料的截圖；需要記錄時，我們會說明只要哪幾行。
 
-本頁截圖裡的 Windows 介面屬於 Microsoft，用來說明安裝與使用的步驟；紅框與裁切是字在開發小組加的。
+本頁截圖裡的 Windows 介面屬於 Microsoft，用來說明安裝與使用的步驟；部分截圖經過裁切，是字在開發小組做的。

@@ -74,11 +74,11 @@ Linux 版的最新版本是 1.3.0，更新內容與 SHA-256 見 [字在 1.3.0](h
 
 1. 打開「設定」→「鍵盤」，在「輸入來源」按「加入輸入來源」：
 
-   <img src="images/linux-1-input-sources.png" width="980" alt="GNOME「設定」的「鍵盤」頁，紅框標出「輸入來源」底下的「加入輸入來源」">
+   <img src="images/linux-1-input-sources.png" width="980" alt="GNOME「設定」的「鍵盤」頁，要按的是「輸入來源」底下的「加入輸入來源」">
 
 2. 選「中文 (臺灣)」，再選「中文 (字在)」，按「加入」：
 
-   <img src="images/linux-2-add-source.png" width="420" alt="「加入輸入來源」對話框，紅框標出「中文 (字在)」與「加入」">
+   <img src="images/linux-2-add-source.png" width="420" alt="「加入輸入來源」對話框，要選的是「中文 (字在)」，再按「加入」">
 
 **Fcitx5**：打開「Fcitx 5 設定」，在「輸入法」把「字在」加到目前的輸入法，按「套用」。
 
@@ -100,7 +100,7 @@ Linux 版的最新版本是 1.3.0，更新內容與 SHA-256 見 [字在 1.3.0](h
 
 選項在輸入法選單：GNOME 是畫面右上角的輸入來源選單，Fcitx5 是系統匣裡「字在」底下的選單。
 
-<img src="images/linux-3-menu.png" width="394" alt="GNOME 右上角的輸入來源選單，紅框標出字在的選項：從「字根表：內建自建字根表」到「關於字在」">
+<img src="images/linux-3-menu.png" width="394" alt="GNOME 右上角的輸入來源選單，字在的選項：從「字根表：內建自建字根表」到「關於字在」">
 
 - 字在的第一行是目前用的字根表，例如「字根表：內建自建字根表」。
 - 以四碼為主（預設）／以三碼為主、符鍵（=）用清單選字（預設關閉）、打錯時發出提示音（預設開啟）：和 macOS 版相同。
@@ -122,6 +122,8 @@ Linux 版的最新版本是 1.3.0，更新內容與 SHA-256 見 [字在 1.3.0](h
 
 <img src="images/linux-settings-4-symbols.png" width="960" alt="「字在設定」的「符號」分頁：符鍵（=）的用法與「＝＋一個鍵（按鍵組合）」清單">
 
+<img src="images/linux-settings-5-about.png" width="960" alt="「字在設定」的「關於」分頁：字在簡介、擴充區的字、資料來源與授權">
+
 自己下載的資料更新檔（ `.zizaipack` ），在首頁按「匯入資料更新檔…」匯入。Linux 版還不能在檔案管理員裡按兩下開啟。
 
 ## 擴充區的字
@@ -142,7 +144,7 @@ Linux 版的最新版本是 1.3.0，更新內容與 SHA-256 見 [字在 1.3.0](h
 
 1. 先把「字在」從輸入來源拿掉。GNOME：「設定」→「鍵盤」→「輸入來源」，按「中文 (字在)」右邊的「⋮」→「移除」：
 
-   <img src="images/linux-4-remove.png" width="980" alt="「輸入來源」裡「中文 (字在)」的「⋮」選單，紅框標出「移除」">
+   <img src="images/linux-4-remove.png" width="980" alt="「輸入來源」裡「中文 (字在)」的「⋮」選單，要按的是「移除」">
 
 2. 移除套件。`ibus-zizai` 、`fcitx5-zizai` 會跟著 `zizai` 一起移除：
    - Ubuntu、Debian：`sudo apt remove zizai`
@@ -164,4 +166,4 @@ Linux 版的最新版本是 1.3.0，更新內容與 SHA-256 見 [字在 1.3.0](h
 
 遇到問題請到 GitHub 的 [Issues](https://github.com/zizai-ime/zizai-ime/issues) 回報。Issues 是公開的：不要貼系統記錄的原文，也不要上傳 `user.db` 、`user.pack` 或含個人資料的截圖；需要記錄時，我們會說明只要哪幾行。
 
-本頁截圖裡的是 GNOME 的介面，用來說明安裝與使用的步驟；紅框與裁切是字在開發小組加的。
+本頁截圖裡的是 GNOME 的介面，用來說明安裝與使用的步驟；部分截圖經過裁切，是字在開發小組做的。
