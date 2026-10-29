@@ -95,7 +95,6 @@ Linux 版的最新版本是 1.3.0，更新內容與 SHA-256 見 [字在 1.3.0](h
 
 倉頡與標準注音（含倚天 26 鍵）目前只有 macOS 版提供，Linux 版這版是大易；macOS 頁的「輸入法」「倉頡」「標準注音」三節不適用 Linux 版，說明見 [輸入法（macOS）](guide-macos.md#輸入法)。
 
-<!-- 圖：linux-typing-dayi.png（212 清單序號 L09） -->
 <img src="images/linux-typing-symbol.png" width="640" alt="文字編輯器裡按符鍵再按句點那顆鍵，組字區顯示「符.」，候選字視窗列出以「。」開頭的中文標點">
 
 選項在輸入法選單：GNOME 是畫面右上角的輸入來源選單，Fcitx5 是系統匣裡「字在」底下的選單。
