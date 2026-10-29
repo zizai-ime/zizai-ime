@@ -36,7 +36,7 @@ Windows 版的最新版本是 1.3.0，更新內容與 SHA-256 見 [字在 1.3.0]
    不相同就不要安裝，刪掉重新下載。只看檔名不能確認內容。
 3. 在下載的檔案上按右鍵，選「解壓縮全部」（Windows 11 沒看到的話，先按「顯示其他選項」）：
 
-   <img src="images/win-install-1-extract-menu.png" width="322" alt="檔案總管的右鍵選單，紅框標出「解壓縮全部」">
+   <img src="images/win-install-1-extract-menu.png" width="286" alt="檔案總管的右鍵選單，紅框標出「解壓縮全部」">
 
 4. 按「解壓縮」，會打開裡面有 `ZiZai.exe` 的資料夾：
 
@@ -90,7 +90,7 @@ Windows 版的最新版本是 1.3.0，更新內容與 SHA-256 見 [字在 1.3.0]
 倉頡與標準注音（含倚天 26 鍵）目前只有 macOS 版提供，Windows 版這版是大易；macOS 頁的「輸入法」「倉頡」「標準注音」三節不適用 Windows 版，說明見 [輸入法（macOS）](guide-macos.md#輸入法)。
 
 <!-- 圖：win-typing-dayi.png（212 清單序號 W22） -->
-<!-- 圖：win-typing-symbol.png（212 清單序號 W23） -->
+<img src="images/win-typing-symbol.png" width="640" alt="記事本裡按符鍵再按句點那顆鍵，組字區顯示「符.」，候選字視窗列出以「。」開頭的中文標點">
 
 內建的是「字在自建字根表（依部件與筆順規則自建）」：以大易輸入法的字根為基礎，拆字碼由程式依字在的取碼規則、全字庫的部件與筆順資料，以及人工指定與調整的字根清單產生，不是任何輸入法廠商的官方字根表。字在與任何輸入法廠商沒有合作或隸屬關係，也未經其背書。有些字的拆法可能和你習慣的不同，可以在「字在設定」的「擴充字根表」分頁替這些字加上你習慣的輸入碼。
 
@@ -98,20 +98,23 @@ Windows 版的最新版本是 1.3.0，更新內容與 SHA-256 見 [字在 1.3.0]
 
 1. 按「開始」，搜尋「字在設定」並打開：
 
-   <img src="images/win-settings-1-start-menu.png" width="808" alt="開始功能表搜尋「字在設定」，紅框標出最符合的項目「字在設定　應用程式」">
+   <img src="images/win-settings-1-start-menu.png" width="808" alt="開始功能表搜尋「字在設定」，紅框標出「最佳比對」的「字在設定　應用程式」">
 
 2. 「首頁」（版本與更新）和「我的詞庫」「擴充字根表」「符號」「查碼」的用法和 macOS 版相同，見 [安裝與使用](guide-macos.md) 的「標點與符號」到「版本與更新」各節。自己下載的資料更新檔（ `.zizaipack` ）也可以在檔案總管裡按兩下匯入。
 
-   <!-- 圖：win-settings-3-home.png（212 清單序號 W17） -->
-   <!-- 圖：win-settings-6-symbols.png（212 清單序號 W20） -->
-   <!-- 圖：win-settings-7-about.png（212 清單序號 W21） -->
+   <img src="images/win-settings-3-home.png" width="962" alt="「字在設定」的「首頁」：版本與更新，有主程式、資料與進階的「接受測試更新檔」">
+
+   <img src="images/win-settings-6-symbols.png" width="962" alt="「字在設定」的「符號」分頁：符鍵（=）的用法與「＝＋一個鍵（按鍵組合）」清單">
+
+   <img src="images/win-settings-7-about.png" width="962" alt="「字在設定」的「關於」分頁頂端：內建字根表與擴充區的字的說明">
 
 3. 「輸入法」分頁放的是 macOS 版在輸入法選單裡的選項，改了自動儲存，切回其他 App 打字時生效。左側分成三處：
 
-   <img src="images/win-settings-2-options.png" width="760" alt="「字在設定」的「輸入法選項」分頁：主要打法、推導與按鍵、字型">
+   <img src="images/win-settings-2-options.png" width="962" alt="「字在設定」的「輸入法」分頁，左側選「使用中的輸入法」，只有大易，畫面寫「目前只有一個輸入法，沒有切換」">
 
-   <!-- 圖：win-settings-4-dayi.png（212 清單序號 W18） -->
-   <!-- 圖：win-settings-5-shared.png（212 清單序號 W19） -->
+   <img src="images/win-settings-4-dayi.png" width="962" alt="「輸入法」分頁左側選「大易」：鍵盤對應圖、四碼與三碼、按鍵與擴充字根表">
+
+   <img src="images/win-settings-5-shared.png" width="962" alt="「輸入法」分頁左側選「共用設定」：按鍵與字型的選項">
 
    - **使用中的輸入法**：Windows 版這版只有大易，畫面上寫「目前只有一個輸入法，沒有切換」。
    - **大易**：鍵盤對應圖；**以四碼為主**（預設）／**以三碼為主**，和 macOS 版相同，三碼包含由四碼推導的三碼；**符鍵（=）用清單選字**（預設關閉），關閉時用按鍵組合，打開時先列出標點清單再選；擴充字根表。
@@ -141,9 +144,9 @@ Windows 版的最新版本是 1.3.0，更新內容與 SHA-256 見 [字在 1.3.0]
 
    <img src="images/win-uninstall-2-confirm.png" width="391" alt="解除安裝的確認視窗「確定要移除『字在』嗎？只會移除程式」，紅框標出「是」">
 
-3. 看到「『字在』解除安裝完成」，按「確定」。「有些項目無法移除」指的是還開著的 App 正在用的檔案，重新開機時會自動刪除；沒有 App 在用字在時，訊息是「已經從這台電腦移除『字在』」：
+3. 看到「已經從這台電腦移除『字在』。」，按「確定」。還有 App 正在用字在時，訊息是「『字在』解除安裝完成」，並多一行「有些項目無法移除」，指的是那些 App 正在用的檔案，重新開機時會自動刪除：
 
-   <img src="images/win-uninstall-3-done.png" width="303" alt="解除安裝完成的訊息「『字在』解除安裝完成。有些項目無法移除，可以自己手動移除。」，紅框標出「確定」">
+   <img src="images/win-uninstall-3-done.png" width="259" alt="解除安裝完成的訊息「已經從這台電腦移除『字在』。」，紅框標出「確定」">
 
 解除安裝會刪掉 `C:\Program Files\Zizai` 、開始功能表的「字在設定」，並從鍵盤清單移除「字在」。詞庫、擴充字根表、設定與匯入的資料更新檔（ `%APPDATA%\Zizai` ），以及記錄檔（ `%LOCALAPPDATA%\Zizai` 的 `tsf.log` 與 `tsf.log.1` ）會留著，重新安裝後還能用。不要了的話，關掉用過字在的 App，再刪掉這兩個資料夾，見 [隱私權政策](../PRIVACY.md)。
 
