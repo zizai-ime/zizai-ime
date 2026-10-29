@@ -6,11 +6,11 @@
 
 ## 下載
 
-Windows 版的最新版本是 1.1.3，更新內容與 SHA-256 見 [字在 1.1.3](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.1.3)。
+Windows 版的最新版本是 1.3.0，更新內容與 SHA-256 見 [字在 1.3.0](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.3.0)。
 
 <p align="center">
-  <a href="https://github.com/zizai-ime/zizai-ime/releases/download/v1.1.3/ZiZai-Win-x64-1.1.3.zip"><img src="images/download-windows-x64.svg" width="187" height="76" alt="下載字在（Windows 10、11，64 位元）"></a>
-  <a href="https://github.com/zizai-ime/zizai-ime/releases/download/v1.1.3/ZiZai-Win-x86-1.1.3.zip"><img src="images/download-windows-x86.svg" width="187" height="76" alt="下載字在（Windows 10，32 位元）"></a>
+  <a href="https://github.com/zizai-ime/zizai-ime/releases/download/v1.3.0/ZiZai-Win-x64-1.3.0.zip"><img src="images/download-windows-x64.svg" width="187" height="76" alt="下載字在（Windows 10、11，64 位元）"></a>
+  <a href="https://github.com/zizai-ime/zizai-ime/releases/download/v1.3.0/ZiZai-Win-x86-1.3.0.zip"><img src="images/download-windows-x86.svg" width="187" height="76" alt="下載字在（Windows 10，32 位元）"></a>
 </p>
 
 - **64 位元**（大多數電腦）：Windows 10、11。32 位元的 App 也能用字在。
@@ -85,7 +85,12 @@ Windows 版的最新版本是 1.1.3，更新內容與 SHA-256 見 [字在 1.1.3]
 
 ## 打字與選字
 
-打字、選字、三碼（由四碼推導）與四碼、標點與符號、字根表，和 macOS 版相同，見 [安裝與使用](guide-macos.md) 的「打字與選字」以後各節。macOS 版寫在「輸入法選單」的選項，Windows 版在「字在設定」的「輸入法選項」分頁。
+打字、選字、三碼（由四碼推導）與四碼、標點與符號、字根表，和 macOS 版相同，見 [安裝與使用](guide-macos.md) 的「打字與選字」以後各節。macOS 版寫在「輸入法選單」的選項，Windows 版在「字在設定」的「輸入法」分頁。
+
+倉頡與標準注音（含倚天 26 鍵）目前只有 macOS 版提供，Windows 版這版是大易；macOS 頁的「輸入法」「倉頡」「標準注音」三節不適用 Windows 版，說明見 [輸入法（macOS）](guide-macos.md#輸入法)。
+
+<!-- 圖：win-typing-dayi.png（212 清單序號 W22） -->
+<!-- 圖：win-typing-symbol.png（212 清單序號 W23） -->
 
 內建的是「字在自建字根表（依部件與筆順規則自建）」：以大易輸入法的字根為基礎，拆字碼由程式依字在的取碼規則、全字庫的部件與筆順資料，以及人工指定與調整的字根清單產生，不是任何輸入法廠商的官方字根表。字在與任何輸入法廠商沒有合作或隸屬關係，也未經其背書。有些字的拆法可能和你習慣的不同，可以在「字在設定」的「擴充字根表」分頁替這些字加上你習慣的輸入碼。
 
@@ -96,20 +101,25 @@ Windows 版的最新版本是 1.1.3，更新內容與 SHA-256 見 [字在 1.1.3]
    <img src="images/win-settings-1-start-menu.png" width="808" alt="開始功能表搜尋「字在設定」，紅框標出最符合的項目「字在設定　應用程式」">
 
 2. 「首頁」（版本與更新）和「我的詞庫」「擴充字根表」「符號」「查碼」的用法和 macOS 版相同，見 [安裝與使用](guide-macos.md) 的「標點與符號」到「版本與更新」各節。自己下載的資料更新檔（ `.zizaipack` ）也可以在檔案總管裡按兩下匯入。
-3. 「輸入法選項」分頁放的是 macOS 版在輸入法選單裡的選項，改了自動儲存，切回其他 App 打字時生效：
+
+   <!-- 圖：win-settings-3-home.png（212 清單序號 W17） -->
+   <!-- 圖：win-settings-6-symbols.png（212 清單序號 W20） -->
+   <!-- 圖：win-settings-7-about.png（212 清單序號 W21） -->
+
+3. 「輸入法」分頁放的是 macOS 版在輸入法選單裡的選項，改了自動儲存，切回其他 App 打字時生效。左側分成三處：
 
    <img src="images/win-settings-2-options.png" width="760" alt="「字在設定」的「輸入法選項」分頁：主要打法、推導與按鍵、字型">
 
-   - **以四碼為主**（預設）／**以三碼為主**：主要打法，和 macOS 版相同；三碼包含由四碼推導的三碼。
-   - **推導二碼**（預設開啟）：三碼、四碼的字也能用首尾兩碼打。
-   - **符鍵（=）用清單選字**（預設關閉）：關閉時用按鍵組合，打開時先列出標點清單再選。
-   - **打錯時發出提示音**（預設開啟）。
-   - **只列出常用字集的字**（預設開啟）：擴充 B 以後的罕用字不列入候選。
-   - **隱藏字型顯示不出來的字**（預設開啟）、**隱藏系統字型沒有的字**（預設關閉）：見下一節。
+   <!-- 圖：win-settings-4-dayi.png（212 清單序號 W18） -->
+   <!-- 圖：win-settings-5-shared.png（212 清單序號 W19） -->
+
+   - **使用中的輸入法**：Windows 版這版只有大易，畫面上寫「目前只有一個輸入法，沒有切換」。
+   - **大易**：鍵盤對應圖；**以四碼為主**（預設）／**以三碼為主**，和 macOS 版相同，三碼包含由四碼推導的三碼；**符鍵（=）用清單選字**（預設關閉），關閉時用按鍵組合，打開時先列出標點清單再選；擴充字根表。
+   - **共用設定**：**打錯時發出提示音**（預設開啟）；**只列出常用字集的字**（預設開啟），擴充 B 以後的罕用字不列入候選；**隱藏字型顯示不出來的字**（預設開啟）、**隱藏系統字型沒有的字**（預設關閉），見下一節。
 
 ## 擴充區的字
 
-「輸入法選項」的「只列出常用字集的字」預設開啟，擴充 B 以後的罕用字不會出現在候選字視窗；自己補的字和擴充字根表的字照樣出現。想打這些字，取消勾選這一項。
+「輸入法」分頁「共用設定」的「只列出常用字集的字」預設開啟，擴充 B 以後的罕用字不會出現在候選字視窗；自己補的字和擴充字根表的字照樣出現。想打這些字，取消勾選這一項。
 
 取消之後，Windows 內建字型（細明體-ExtB 等）顯示得出來的字會出現在候選字視窗；所有字型都顯示不出來的字，「隱藏字型顯示不出來的字」（預設開啟）會藏起來。想打這些字，可以安裝全字庫的字型：
 

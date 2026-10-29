@@ -16,9 +16,9 @@
 
 ## 下載與核對
 
-Linux 版的最新版本是 1.1.3，更新內容與 SHA-256 見 [字在 1.1.3](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.1.3)。
+Linux 版的最新版本是 1.3.0，更新內容與 SHA-256 見 [字在 1.3.0](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.3.0)。
 
-1. 到 [字在 1.1.3](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.1.3) 下載。檔名裡有發行版的名稱：
+1. 到 [字在 1.3.0](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.3.0) 下載。檔名裡有發行版的名稱：
 
    | 發行版 | 格式 | 檔名裡的字 |
    |---|---|---|
@@ -93,6 +93,11 @@ Linux 版的最新版本是 1.1.3，更新內容與 SHA-256 見 [字在 1.1.3](h
 
 打字、選字、三碼（由四碼推導）與四碼、標點與符號、字根表，和 macOS 版相同，見 [安裝與使用](guide-macos.md) 的「打字與選字」以後各節。
 
+倉頡與標準注音（含倚天 26 鍵）目前只有 macOS 版提供，Linux 版這版是大易；macOS 頁的「輸入法」「倉頡」「標準注音」三節不適用 Linux 版，說明見 [輸入法（macOS）](guide-macos.md#輸入法)。
+
+<!-- 圖：linux-typing-dayi.png（212 清單序號 L09） -->
+<!-- 圖：linux-typing-symbol.png（212 清單序號 L10） -->
+
 選項在輸入法選單：GNOME 是畫面右上角的輸入來源選單，Fcitx5 是系統匣裡「字在」底下的選單。
 
 <img src="images/linux-3-menu.png" width="394" alt="GNOME 右上角的輸入來源選單，紅框標出字在的選項：從「字根表：內建自建字根表」到「關於字在」">
@@ -105,6 +110,13 @@ Linux 版的最新版本是 1.1.3，更新內容與 SHA-256 見 [字在 1.1.3](h
 ## 字在設定
 
 從應用程式選單打開「字在設定」。「首頁」（版本與更新）和「我的詞庫」「擴充字根表」「符號」「查碼」的用法和 macOS 版相同，見 [安裝與使用](guide-macos.md) 的「標點與符號」到「版本與更新」各節。
+
+「輸入法」分頁左側有「使用中的輸入法」「大易」「共用設定」三處：「大易」有鍵盤對應圖與擴充字根表，「共用設定」有按鍵與字型的選項。Linux 版這版只有大易，「使用中的輸入法」沒有切換。
+
+<!-- 圖：linux-settings-1-home.png（212 清單序號 L05） -->
+<!-- 圖：linux-settings-2-dayi.png（212 清單序號 L06） -->
+<!-- 圖：linux-settings-3-shared.png（212 清單序號 L07） -->
+<!-- 圖：linux-settings-4-symbols.png（212 清單序號 L08） -->
 
 自己下載的資料更新檔（ `.zizaipack` ），在首頁按「匯入資料更新檔…」匯入。Linux 版還不能在檔案管理員裡按兩下開啟。
 
