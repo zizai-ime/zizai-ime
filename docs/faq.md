@@ -14,7 +14,7 @@
 | Android | Android 8 以上 |
 | iPhone、iPad | iOS 17、iPadOS 17 以上 |
 
-macOS 版有大易、倉頡、標準注音、倚天 26 鍵（標準注音的另一種鍵盤排列）四種輸入法，在輸入法選單切換；Windows 版有大易與倉頡，Linux 版這版是大易。
+macOS 版有大易、倉頡、標準注音、倚天 26 鍵（標準注音的另一種鍵盤排列）四種輸入法，在輸入法選單切換；Windows 版 1.3.1 起也有這四種，在工作列的「中」「英」按鈕按右鍵切換；Linux 版這版（1.3.0）是大易，1.3.1 準備中。
 
 各版本的版本號與下載見 [首頁的下載](../README.md#下載)，安裝步驟見各平台的安裝與使用：[macOS](guide-macos.md)、[Windows](guide-windows.md)、[Linux](guide-linux.md)、[Android](guide-android.md)、[iPhone、iPad](guide-ios.md)。
 
