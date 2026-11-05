@@ -15,7 +15,7 @@
 ## 下載
 
 <p align="center">
-  <a href="https://github.com/zizai-ime/zizai-ime/releases/download/v1.3.0/ZiZai-Mac-Universal-1.3.0.zip"><img src="docs/images/download-macos.svg" width="187" height="76" alt="下載字在（macOS 13 以上）"></a>
+  <a href="https://github.com/zizai-ime/zizai-ime/releases/download/v1.3.1/ZiZai-Mac-Universal-1.3.1.zip"><img src="docs/images/download-macos.svg" width="187" height="76" alt="下載字在（macOS 13 以上）"></a>
   <a href="docs/guide-windows.md#下載"><img src="docs/images/download-windows.svg" width="187" height="76" alt="下載字在（Windows 10、11）"></a>
   <a href="docs/guide-linux.md#下載與核對"><img src="docs/images/download-linux.svg" width="187" height="76" alt="下載字在（Linux，x86_64）"></a>
 </p>
@@ -29,9 +29,9 @@
 
 | 系統 | 版本 | 需求 | 安裝說明 |
 |---|---|---|---|
-| macOS | [1.3.0](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.3.0) | macOS 13 以上，支援 Apple 晶片與 Intel | [安裝與使用](docs/guide-macos.md) |
-| Windows | [1.3.0](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.3.0) | Windows 10、11。64 位元與 32 位元的檔案不同，在安裝說明選 | [安裝與使用（Windows）](docs/guide-windows.md) |
-| Linux | [1.3.0](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.3.0) | x86_64。Ubuntu 24.04、26.04 與 Debian 13 用 `.deb` ，Fedora 43、44 用 `.rpm` ，其他發行版用 `.tar.gz` 。IBus 與 Fcitx5 都能用 | [安裝與使用（Linux）](docs/guide-linux.md) |
+| macOS | [1.3.1](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.3.1) | macOS 13 以上，支援 Apple 晶片與 Intel | [安裝與使用](docs/guide-macos.md) |
+| Windows | [1.3.1](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.3.1) | Windows 10、11。64 位元與 32 位元的檔案不同，在安裝說明選 | [安裝與使用（Windows）](docs/guide-windows.md) |
+| Linux | [1.3.1](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.3.1) | x86_64。Ubuntu 24.04、26.04 與 Debian 13 用 `.deb` ，Fedora 43、44 用 `.rpm` ，其他發行版用 `.tar.gz` 。IBus 與 Fcitx5 都能用 | [安裝與使用（Linux）](docs/guide-linux.md) |
 | Android | [1.0.0](https://play.google.com/store/apps/details?id=studio.mosil.ime.zizai) | Android 8 以上 | 從 Google Play 安裝，打開字在照畫面上的步驟設定 |
 | iPhone、iPad | [1.0.0](https://apps.apple.com/tw/app/%E5%AD%97%E5%9C%A8-%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95/id6821223548) | iOS 17、iPadOS 17 以上 | 從 App Store 安裝，打開字在照畫面上的步驟設定 |
 
@@ -40,9 +40,10 @@ Windows 版與 Linux 版還沒有數位簽章，安裝前請先照安裝說明�
 ## 特色
 
 - **內建字根表**：「字在自建字根表（依部件與筆順規則自建）」，收錄 7 萬多字，含 Unicode 擴充區的字（見備註）。輸入碼依全字庫的部件，以及該字的筆順重新拆字產生，有些字的拆法可能和你習慣的不同，可以在「字在設定」的「擴充字根表」分頁替這些字加上你習慣的輸入碼。
-- **四種輸入法（macOS）**：macOS 版有大易、倉頡、標準注音、倚天 26 鍵（標準注音的另一種鍵盤排列）四種輸入法，在輸入法選單切換；Windows 版、Linux 版這版是大易。見 [安裝與使用](docs/guide-macos.md#輸入法)。
+- **四種輸入法（macOS）**：macOS 版有大易、倉頡、標準注音、倚天 26 鍵（標準注音的另一種鍵盤排列）四種輸入法，在輸入法選單切換；Windows 版這版有大易與倉頡，在語言列的字在圖示按右鍵切換；Linux 版這版是大易。見 [安裝與使用](docs/guide-macos.md#輸入法)。
 - **三碼與四碼並存**：三碼（由四碼推導）和四碼都能直接打，不用切換。
-- **動態字序**：依你自己選過的字調整候選順序，只在候選列前面幾格裡對調。所有打法共用一份次數：在一種打法常選的字，在另一種打法選到時也會很快往前。不想讓某一組換位，在候選字視窗按右鍵選「還原這組的順序」。
+- **推導二碼**：大易的三碼、四碼字，也能用第一碼加最後一碼打出，排在原有的二碼字之後；不需要時可以在「字在設定」關閉。
+- **動態字序**（macOS、Windows）：依你自己選過的字調整候選順序，選了才會換位。候選不論幾個，選過的字比前面的字常選得夠多就往前排，比第 1 個多選 3 次才換到第 1 個；很久沒選的字會慢慢退回去。所有打法共用一份次數：在一種打法常選的字，在另一種打法選到時也會很快往前。macOS 版不想讓某一組換位，在候選字視窗按右鍵選「還原這組的順序」。
 - **資料更新**：字根表有更新時，在「字在設定」的首頁按「檢查更新」，下載資料更新檔，看過改了哪些字再套用，不必重裝字在。見 [安裝與使用](docs/guide-macos.md#版本與更新)。
 - **擴充與自訂**：支援 `.cin` 格式，可以補字、自訂輸入碼、停用不要的字。請使用你有權使用的 `.cin` 檔，匯入的字根表只供你自己使用。「字在」不附、也不提供下載任何第三方的字根表檔案。
 - **標點與符號**：按 `=` 再按一顆鍵，見 [符號字根表](docs/symbols.md)。
