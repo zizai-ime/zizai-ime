@@ -102,19 +102,25 @@
 /* 下載 */
 .downloads { padding: 72px 0 40px; }
 .home .downloads h2 { margin-top: 0; }
-.dl-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(14.5rem, 100%), 1fr)); gap: 16px; margin: 20px 0; }
+.dl-group + .dl-group { margin-top: 44px; }
+.home .dl-group-title { margin: 20px 0 0; font-size: 1.1rem; letter-spacing: 0.08em; }
+.dl-group-title::before { content: ""; display: block; width: 28px; height: 3px; background: var(--gold); border-radius: 2px; margin-bottom: 8px; }
+/* 兩組用同一種三欄格線，手機版兩張卡和電腦版的卡同寬、不拉滿 */
+.dl-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; margin: 14px 0 20px; }
+@media (min-width: 760px) { .dl-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.dl-group-note { color: var(--muted); margin: 0; }
 .dl-card {
   background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
   padding: 18px 18px 14px; display: flex; flex-direction: column;
 }
-.dl-card h3 { margin: 0 0 4px; }
+.dl-card h4 { margin: 0 0 4px; font-size: 1.1rem; }
 .dl-card p { margin: 0.3em 0; }
 .dl-version { font-weight: 700; }
 .dl-need { color: var(--muted); font-size: 0.92rem; line-height: 1.6; flex: 1; }
 .dl-need code { white-space: normal; }
 .dl-button { margin-top: 10px !important; }
 .dl-button img { display: block; height: 56px; width: auto; }
-.dl-links { text-align: center; }
+.dl-links { margin: 0 0 12px; }
 .dl-notes { background: var(--surface); border-left: 4px solid var(--warn); border-radius: 0 8px 8px 0; padding: 4px 16px; }
 
 /* 問題與建議、使用條款與資料來源 */
@@ -133,7 +139,6 @@
   .brandset { gap: 14px; }
   .zhebi { width: 64px; }
   .group { padding: 60px 0 68px; }
-  .dl-grid { grid-template-columns: 1fr; }
   .group-art { flex-basis: 140px; height: 64px; margin-bottom: 16px; }
   .group-clouds { top: 4px; }
 }

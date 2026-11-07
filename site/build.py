@@ -313,6 +313,12 @@ DL_IMAGES = {
 }
 
 
+# 版本表「系統」欄 → 下載區的分組
+DESKTOP_SYSTEMS = ("macOS", "Windows", "Linux")
+MOBILE_SYSTEMS = ("Android", "iPhone、iPad")
+MOBILE_NOTE_RE = re.compile(r"[^。>]*Google Play、App Store[^。<]*。")
+
+
 def readme_sections(body: str) -> dict[str, str]:
     """把轉好的 README 依 h2 切開：{標題錨點: 那一節的 HTML（含 h2）}。"""
     out = {}
@@ -323,33 +329,40 @@ def readme_sections(body: str) -> dict[str, str]:
     return out
 
 
-def download_cards(cfg: Config, section: str) -> tuple[str, str, str]:
-    """從 README「下載」節取各平台的卡片、版本說明連結與提醒。"""
+def download_cards(cfg: Config, section: str) -> tuple[str, str, str, str]:
+    """從 README「下載」節取電腦版與手機版的卡片、版本說明連結與提醒。
+    分組依版本表的「系統」欄，不看列的順序；不認得的系統就建置失敗。"""
     buttons = {}
     for m in DL_LINK_RE.finditer(section):
         if m.group(1) in DL_IMAGES:
             buttons[DL_IMAGES[m.group(1)]] = m.group(0)
     by_nav = {p.nav: p for p in cfg.pages if p.nav}
-    cards = []
+    desktop, mobile = [], []
     for row in ROW_RE.findall(section):
         cells = CELL_RE.findall(row)
         if len(cells) < 3:
             continue  # 表頭
         system, version, need = (c.strip() for c in cells[:3])
+        if system in DESKTOP_SYSTEMS:
+            group = desktop
+        elif system in MOBILE_SYSTEMS:
+            group = mobile
+        else:
+            raise SystemExit(f"錯誤：README 版本表的系統「{system}」不屬於電腦版或手機版")
         if system not in buttons or system not in by_nav:
             raise SystemExit(f"錯誤：README 的下載節找不到「{system}」的下載按鈕或安裝說明頁")
         guide = html.escape(cfg.base_path + by_nav[system].path, quote=True)
-        cards.append(
+        group.append(
             '<article class="dl-card reveal">\n'
-            f'<h3>{system}</h3>\n'
+            f'<h4>{system}</h4>\n'
             f'<p class="dl-version">版本 {version}</p>\n'
             f'<p class="dl-need">{need}</p>\n'
             f'<p class="dl-button">{buttons[system]}</p>\n'
             f'<p class="dl-guide"><a href="{guide}">安裝與使用</a></p>\n'
             '</article>'
         )
-    if len(cards) != len(DL_IMAGES):
-        raise SystemExit(f"錯誤：README 的版本表解析出 {len(cards)} 個平台，應該是 {len(DL_IMAGES)} 個")
+    if len(desktop) != len(DESKTOP_SYSTEMS) or len(mobile) != len(MOBILE_SYSTEMS):
+        raise SystemExit(f"錯誤：README 的版本表解析出電腦版 {len(desktop)} 個、手機版 {len(mobile)} 個平台")
     links, notes = [], []
     for centered, inner in PARA_RE.findall(section):
         if "<img" in inner:
@@ -358,20 +371,27 @@ def download_cards(cfg: Config, section: str) -> tuple[str, str, str]:
             links.extend(re.findall(r'<a href="[^"]+">[^<]*</a>', inner))
         else:
             notes.append(f"<p>{inner}</p>")
-    return "\n".join(cards), "\n".join(links), "\n".join(notes)
+    return "\n".join(desktop), "\n".join(mobile), "\n".join(links), "\n".join(notes)
 
 
 def render_home_body(cfg: Config, body: str, template: str) -> str:
     secs = readme_sections(body)
     try:
         dl, support, terms = secs["下載"], secs["問題與建議"], secs["使用條款與資料來源"]
+        install = secs["安裝與使用"]
     except KeyError as exc:
         raise SystemExit(f"錯誤：README 少了「{exc.args[0]}」這一節") from None
-    cards, release_links, notes = download_cards(cfg, dl)
+    desktop, mobile, release_links, notes = download_cards(cfg, dl)
+    m = MOBILE_NOTE_RE.search(install)
+    if not m:
+        raise SystemExit("錯誤：README「安裝與使用」節找不到手機版的安裝說明句")
+    mobile_note = m.group(0).strip()
     tpl = Template((SITE_DIR / template).read_text(encoding="utf-8"))
     return tpl.substitute(
         base=html.escape(cfg.base_path, quote=True),
-        download_cards=cards,
+        desktop_cards=desktop,
+        mobile_cards=mobile,
+        mobile_note=mobile_note,
         release_links=release_links,
         download_notes=notes,
         support_section=support,
