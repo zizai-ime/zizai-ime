@@ -125,7 +125,7 @@
 
 /* 問題與建議、使用條款與資料來源 */
 .home-plain { padding: 8px 0 24px; }
-.home-plain .home-wrap { max-width: 52rem; }
+.home-plain .home-wrap > * { max-width: 52rem; }
 
 /* 進場淡入：預設全部可見。home.js 在 html 加 .js-reveal，只把還在視窗下方的卡片標成 .pending，
    進到畫面或 1.5 秒保險時間到就拿掉。 */
