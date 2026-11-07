@@ -170,8 +170,9 @@ def main() -> int:
                 if kind != "a.href":
                     errors.append(f"{name}: {kind} 指到站外：{url}")
                 continue
-            if kind == "script":
-                errors.append(f"{name}: 有 <script>：{url}")
+            if kind == "script" and url == "(內嵌)":
+                # 只允許站內的程式檔（首頁的 assets/home.js），不允許內嵌程式。
+                errors.append(f"{name}: 有內嵌的 <script>")
                 continue
             checked += 1
             if url.startswith("#"):

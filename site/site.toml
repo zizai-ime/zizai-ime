@@ -13,12 +13,14 @@ google_site_verification = ""
 
 # 每一頁：source 是儲存庫裡的來源檔，path 是網址（相對於 site_url，首頁是空字串）。
 # nav 有值的頁面會出現在頁首的選單。
+# template 有值的頁面用 site/ 底下那個專用範本（首頁用 home.html，並載入 assets/home.css、home.js）。
 [[pages]]
 source = "README.md"
 path = ""
 title = "ZiZai 字在輸入法"
 description = "免費的 macOS／Windows／Linux／Android／iOS 中文輸入法。內建字根表，裝好就能打字。"
 nav = "首頁"
+template = "home.html"
 
 [[pages]]
 source = "docs/guide-macos.md"

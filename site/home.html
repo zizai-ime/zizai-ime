@@ -1,0 +1,179 @@
+<!-- 首頁專用範本：由 build.py 套進 template.html 的內文。
+     版本、下載連結與提醒從 README「下載」節解析；最後兩節照 README 轉出。
+     特色的文字取自 README「特色」節（可縮短，不加新的功能宣稱）。 -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="px hero-bands" data-speed="0.35" aria-hidden="true">
+    <span class="band band-1"></span><span class="band band-2"></span><span class="band band-3"></span>
+  </div>
+  <div class="hero-inner">
+    <div class="brandset">
+      <svg class="zhebi" viewBox="0 0 230 280" width="115" height="140" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="zb-blue" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#BFDBFE"/><stop offset="1" stop-color="#93C5FD"/>
+          </linearGradient>
+          <linearGradient id="zb-gold" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#FDE68A"/><stop offset="1" stop-color="#F59E0B"/>
+          </linearGradient>
+        </defs>
+        <polygon points="130,10 190,10 60,270 0,270" fill="url(#zb-blue)"/>
+        <polygon points="100,130 160,130 225,260 165,260" fill="url(#zb-gold)"/>
+        <polyline points="160,14 100,134 193,258" fill="none" stroke="#F8FAFC" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h1 id="hero-title" class="wordmark">
+        <span class="wm-main"><span class="wm-zi">字</span>在</span>
+        <span class="wm-sub">中文輸入法</span>
+      </h1>
+    </div>
+    <p class="hero-lead">免費的 macOS／Windows／Linux／Android／iOS 中文輸入法</p>
+    <p class="hero-sub">內建字根表，裝好就能打字</p>
+    <p class="hero-actions">
+      <a class="btn btn-primary" href="#下載">下載</a>
+      <a class="btn btn-ghost" href="#特色">看特色</a>
+    </p>
+  </div>
+</section>
+
+<div id="特色" class="groups">
+
+<section class="group group-1" aria-labelledby="g1-title">
+  <div class="px group-bg" data-speed="-0.12" aria-hidden="true"></div>
+  <div class="px group-glyph" data-speed="0.3" aria-hidden="true">字</div>
+  <div class="group-inner">
+    <p class="group-kicker">特色 1／4</p>
+    <h2 id="g1-title">裝好就能打字</h2>
+    <div class="cards">
+      <article class="card reveal">
+        <h3>內建字根表</h3>
+        <p>「字在自建字根表（依部件與筆順規則自建）」，收錄 7 萬多字，含 Unicode 擴充區的字。有些字的拆法可能和你習慣的不同，可以在「字在設定」的「擴充字根表」分頁替這些字加上你習慣的輸入碼。</p>
+        <p class="card-note">擴充區的字大多要另外安裝全字庫字型才看得到，見<a href="${base}macos/#擴充區的字">安裝方式</a>。</p>
+      </article>
+      <article class="card reveal">
+        <h3>三碼與四碼並存</h3>
+        <p>三碼（由四碼推導）和四碼都能直接打，不用切換。</p>
+      </article>
+      <article class="card reveal">
+        <h3>推導二碼</h3>
+        <p>大易的三碼、四碼字，也能用第一碼加最後一碼打出，排在原有的二碼字之後；不需要時可以在「字在設定」關閉。</p>
+        <p class="card-note">macOS、Windows；Linux 1.3.1 起。</p>
+      </article>
+      <article class="card reveal">
+        <h3>標點與符號</h3>
+        <p>按 <code>=</code> 再按一顆鍵，見<a href="${base}symbols/">符號字根表</a>。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="group group-2" aria-labelledby="g2-title">
+  <div class="px group-bg" data-speed="-0.12" aria-hidden="true"></div>
+  <div class="px group-glyph" data-speed="0.3" aria-hidden="true">四</div>
+  <div class="group-inner">
+    <p class="group-kicker">特色 2／4</p>
+    <h2 id="g2-title">四種輸入法</h2>
+    <p class="group-lead">macOS 版與 Windows 版都有四種輸入法：</p>
+    <ul class="methods" role="list">
+      <li class="reveal">大易</li>
+      <li class="reveal">倉頡</li>
+      <li class="reveal">標準注音</li>
+      <li class="reveal">倚天 26 鍵<small>（標準注音的另一種鍵盤排列）</small></li>
+    </ul>
+    <div class="cards">
+      <article class="card reveal">
+        <h3>macOS</h3>
+        <p>在輸入法選單切換，見<a href="${base}macos/#輸入法">安裝與使用</a>。</p>
+      </article>
+      <article class="card reveal">
+        <h3>Windows</h3>
+        <p>在工作列的「中」「英」按鈕按右鍵切換。</p>
+      </article>
+      <article class="card reveal">
+        <h3>Linux</h3>
+        <p>這版（1.3.0）是大易。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="group group-3" aria-labelledby="g3-title">
+  <div class="px group-bg" data-speed="-0.12" aria-hidden="true"></div>
+  <div class="px group-glyph" data-speed="0.3" aria-hidden="true">順</div>
+  <div class="group-inner">
+    <p class="group-kicker">特色 3／4</p>
+    <h2 id="g3-title">越打越順手</h2>
+    <div class="cards">
+      <article class="card reveal">
+        <h3>動態字序</h3>
+        <p>依你自己選過的字調整候選順序，選了才會換位；很久沒選的字會慢慢退回去。所有打法共用一份次數。</p>
+        <p class="card-note">macOS、Windows。</p>
+      </article>
+      <article class="card reveal">
+        <h3>資料更新</h3>
+        <p>字根表有更新時，在「字在設定」的首頁按「檢查更新」，下載資料更新檔，看過改了哪些字再套用，不必重裝字在。</p>
+      </article>
+      <article class="card reveal">
+        <h3>擴充與自訂</h3>
+        <p>支援 <code>.cin</code> 格式，可以補字、自訂輸入碼、停用不要的字。</p>
+        <p class="card-note">請使用你有權使用的 <code>.cin</code> 檔，匯入的字根表只供你自己使用。「字在」不附、也不提供下載任何第三方的字根表檔案。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="group group-4" aria-labelledby="g4-title">
+  <div class="px group-bg" data-speed="-0.12" aria-hidden="true"></div>
+  <div class="px group-clouds" data-speed="0.25" aria-hidden="true">
+    <svg viewBox="0 0 600 220" width="600" height="220" focusable="false">
+      <rect x="40" y="40" width="300" height="34" rx="17" fill="#CBD5E1" opacity="0.22"/>
+      <rect x="150" y="86" width="380" height="34" rx="17" fill="#93C5FD" opacity="0.18"/>
+      <rect x="0" y="132" width="320" height="34" rx="17" fill="#475569" opacity="0.45"/>
+      <rect x="260" y="178" width="300" height="30" rx="15" fill="#CBD5E1" opacity="0.16"/>
+      <rect x="70" y="122" width="260" height="4" rx="2" fill="#FDE68A" opacity="0.85"/>
+      <rect x="300" y="168" width="220" height="4" rx="2" fill="#FDE68A" opacity="0.7"/>
+    </svg>
+  </div>
+  <div class="group-inner">
+    <p class="group-kicker">特色 4／4</p>
+    <h2 id="g4-title">打字不連網</h2>
+    <div class="cards">
+      <article class="card reveal">
+        <h3>輸入法本體不連網</h3>
+        <p>輸入法本體沒有連網的功能，不記錄打字內容。</p>
+      </article>
+      <article class="card reveal">
+        <h3>只記在這台裝置</h3>
+        <p>動態字序只在這台裝置上記下你選過的每個字各選了幾次與調整過的候選位置，不記句子、前後文、時間。</p>
+      </article>
+      <article class="card reveal">
+        <h3>按了才連 GitHub</h3>
+        <p>只有在「字在設定」按「檢查更新」或下載資料更新檔時，才會連到 GitHub，不會自動連網，也不會送出你的任何資料。</p>
+      </article>
+      <article class="card reveal">
+        <h3>不放廣告、沒有追蹤</h3>
+        <p>見<a href="${base}privacy/">隱私權政策</a>。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<section class="downloads" aria-labelledby="下載">
+  <div class="home-wrap">
+    <h2 id="下載">下載</h2>
+    <div class="dl-grid">
+$download_cards
+    </div>
+    <p class="dl-links">$release_links</p>
+    <div class="dl-notes">
+$download_notes
+    </div>
+  </div>
+</section>
+
+<section class="home-plain">
+  <div class="home-wrap">
+$support_section
+$terms_section
+  </div>
+</section>

@@ -46,6 +46,7 @@ class Page:
     title: str
     description: str
     nav: str | None
+    template: str | None = None
 
 
 @dataclass
@@ -71,7 +72,8 @@ def load_config() -> Config:
         site_url += "/"
     base_path = urlsplit(site_url).path or "/"
     pages = [
-        Page(p["source"], p["path"], p["title"], p["description"], p.get("nav"))
+        Page(p["source"], p["path"], p["title"], p["description"], p.get("nav"),
+             p.get("template"))
         for p in raw["pages"]
     ]
     return Config(
@@ -256,7 +258,7 @@ def site_markers(body: str) -> str:
 
 def render_html(cfg: Config, tpl: Template, page: Page, body: str, *,
                 canonical: bool = True, current: Page | None = None,
-                extra: list[str] | None = None) -> str:
+                extra: list[str] | None = None, extra_body: str = "") -> str:
     is_home = page.path == ""
     full_title = page.title if is_home else f"{page.title}｜{cfg.site_name}"
     e = lambda s: html.escape(s, quote=True)  # noqa: E731
@@ -279,6 +281,7 @@ def render_html(cfg: Config, tpl: Template, page: Page, body: str, *,
         site_name=e(cfg.site_name),
         base=e(cfg.base_path),
         extra_head="\n".join(extra or []),
+        extra_body=extra_body,
         nav=nav_html(cfg, current),
         body=body,
         page_class="home" if is_home else "doc",
@@ -288,10 +291,104 @@ def render_html(cfg: Config, tpl: Template, page: Page, body: str, *,
     )
 
 
+# ---------- 首頁專用範本（site/home.html） ----------
+# 首頁的版面在 home.html；版本、下載連結、商店連結、需求與提醒都從 README 的「下載」節解析，
+# 「問題與建議」「使用條款與資料來源」兩節照 README 轉出。以後只改 README 就能更新。
+
+H2_SPLIT_RE = re.compile(r'(?=<h2 id=")')
+H2_ID_RE = re.compile(r'<h2 id="([^"]+)"')
+DL_LINK_RE = re.compile(
+    r'<a href="[^"]+"><img src="[^"]*/images/([\w-]+)\.(?:svg|png)"[^>]*></a>')
+ROW_RE = re.compile(r"<tr>(.*?)</tr>", re.S)
+CELL_RE = re.compile(r"<td>(.*?)</td>", re.S)
+PARA_RE = re.compile(r"<p( align=\"center\")?>(.*?)</p>", re.S)
+
+# 下載按鈕圖檔 → 版本表「系統」欄
+DL_IMAGES = {
+    "download-macos": "macOS",
+    "download-windows": "Windows",
+    "download-linux": "Linux",
+    "badge-google-play": "Android",
+    "badge-app-store": "iPhone、iPad",
+}
+
+
+def readme_sections(body: str) -> dict[str, str]:
+    """把轉好的 README 依 h2 切開：{標題錨點: 那一節的 HTML（含 h2）}。"""
+    out = {}
+    for part in H2_SPLIT_RE.split(body):
+        m = H2_ID_RE.match(part)
+        if m:
+            out[m.group(1)] = part
+    return out
+
+
+def download_cards(cfg: Config, section: str) -> tuple[str, str, str]:
+    """從 README「下載」節取各平台的卡片、版本說明連結與提醒。"""
+    buttons = {}
+    for m in DL_LINK_RE.finditer(section):
+        if m.group(1) in DL_IMAGES:
+            buttons[DL_IMAGES[m.group(1)]] = m.group(0)
+    by_nav = {p.nav: p for p in cfg.pages if p.nav}
+    cards = []
+    for row in ROW_RE.findall(section):
+        cells = CELL_RE.findall(row)
+        if len(cells) < 3:
+            continue  # 表頭
+        system, version, need = (c.strip() for c in cells[:3])
+        if system not in buttons or system not in by_nav:
+            raise SystemExit(f"錯誤：README 的下載節找不到「{system}」的下載按鈕或安裝說明頁")
+        guide = html.escape(cfg.base_path + by_nav[system].path, quote=True)
+        cards.append(
+            '<article class="dl-card reveal">\n'
+            f'<h3>{system}</h3>\n'
+            f'<p class="dl-version">版本 {version}</p>\n'
+            f'<p class="dl-need">{need}</p>\n'
+            f'<p class="dl-button">{buttons[system]}</p>\n'
+            f'<p class="dl-guide"><a href="{guide}">安裝與使用</a></p>\n'
+            '</article>'
+        )
+    if len(cards) != len(DL_IMAGES):
+        raise SystemExit(f"錯誤：README 的版本表解析出 {len(cards)} 個平台，應該是 {len(DL_IMAGES)} 個")
+    links, notes = [], []
+    for centered, inner in PARA_RE.findall(section):
+        if "<img" in inner:
+            continue
+        if centered:
+            links.extend(re.findall(r'<a href="[^"]+">[^<]*</a>', inner))
+        else:
+            notes.append(f"<p>{inner}</p>")
+    return "\n".join(cards), "\n".join(links), "\n".join(notes)
+
+
+def render_home_body(cfg: Config, body: str, template: str) -> str:
+    secs = readme_sections(body)
+    try:
+        dl, support, terms = secs["下載"], secs["問題與建議"], secs["使用條款與資料來源"]
+    except KeyError as exc:
+        raise SystemExit(f"錯誤：README 少了「{exc.args[0]}」這一節") from None
+    cards, release_links, notes = download_cards(cfg, dl)
+    tpl = Template((SITE_DIR / template).read_text(encoding="utf-8"))
+    return tpl.substitute(
+        base=html.escape(cfg.base_path, quote=True),
+        download_cards=cards,
+        release_links=release_links,
+        download_notes=notes,
+        support_section=support,
+        terms_section=terms,
+    )
+
+
 def render_page(cfg: Config, md: MarkdownIt, rw: LinkRewriter, tpl: Template, page: Page) -> str:
     src = (REPO / page.source).read_text(encoding="utf-8")
     body = wrap_tables(rw.rewrite(page.source, site_markers(md.render(src))))
     extra = []
+    extra_body = ""
+    if page.template:
+        body = render_home_body(cfg, body, page.template)
+        stem = Path(page.template).stem
+        extra.append(f'<link rel="stylesheet" href="{html.escape(cfg.base_path)}assets/{stem}.css">')
+        extra_body = f'<script src="{html.escape(cfg.base_path)}assets/{stem}.js" defer></script>'
     if page.path == "":
         extra.append(f'<meta name="apple-itunes-app" content="app-id={cfg.app_store_id}">')
         if cfg.google_site_verification:
@@ -299,7 +396,7 @@ def render_page(cfg: Config, md: MarkdownIt, rw: LinkRewriter, tpl: Template, pa
             extra.append('<meta name="google-site-verification" content="'
                          + html.escape(cfg.google_site_verification, quote=True) + '">')
         extra.append(json_ld(cfg, page))
-    return render_html(cfg, tpl, page, body, current=page, extra=extra)
+    return render_html(cfg, tpl, page, body, current=page, extra=extra, extra_body=extra_body)
 
 
 def render_404(cfg: Config, tpl: Template) -> str:
