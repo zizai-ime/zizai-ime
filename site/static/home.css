@@ -1,16 +1,20 @@
 /* 字在官網首頁（只在首頁載入）。主視覺與四組特色固定深色底（和上架圖一致），
    下載與最後兩節跟著淺色、深色主題。視差由 home.js 依捲動位置設 translate3d；
    沒有 JS 或「減少動態效果」時不位移、不淡入，內容直接可見。 */
-.home main.wrap { max-width: none; padding: 0; overflow-x: clip; }
+.home main.wrap { max-width: none; padding: 0; }
 .home .content > :first-child { margin-top: 0; }
 .home-wrap { max-width: 64rem; margin: 0 auto; padding: 0 16px; }
+.home .content, .home-wrap, .hero-inner, .group-inner { min-width: 0; }
+.cards > *, .dl-grid > *, .methods li, .hero-lead, .hero-sub, .brandset, .wordmark { min-width: 0; max-width: 100%; }
+/* 視差層的溢出由各段 section 自己裁掉 */
+.hero, .group, .downloads, .home-plain { overflow: hidden; overflow: clip; }
 
 /* 共用：視差層 */
 .px { position: absolute; pointer-events: none; will-change: transform; }
 
 /* 主視覺 */
 .hero {
-  position: relative; overflow: hidden; isolation: isolate;
+  position: relative; isolation: isolate;
   background: linear-gradient(160deg, #141E2D 0%, #223A5E 55%, #2D4D77 100%);
   color: #F1F5F9;
   min-height: min(88vh, 46rem);
@@ -27,13 +31,13 @@
 .band-1 { transform: translate(-50%, -50%) translateX(18vw) rotate(-63deg); }
 .band-2 { transform: translate(-50%, -50%) translateX(30vw) rotate(-63deg); height: 12px; opacity: 0.3; }
 .band-3 { transform: translate(-50%, -50%) translateX(-34vw) rotate(-63deg); height: 40px; opacity: 0.16; }
-.hero-inner { position: relative; width: 100%; max-width: 64rem; margin: 0 auto; padding: 56px 16px 64px; }
+.hero-inner { position: relative; width: 100%; overflow-wrap: anywhere; max-width: 64rem; margin: 0 auto; padding: 56px 16px 64px; }
 .brandset { display: flex; align-items: center; gap: 22px; margin-bottom: 28px; }
 .zhebi { flex: none; width: 92px; height: auto; }
 .home .wordmark { margin: 0; display: flex; flex-direction: column; gap: 6px; line-height: 1.1; font-size: 1rem; }
 .wm-main { font-size: clamp(3.2rem, 9vw, 5rem); font-weight: 900; color: #F8FAFC; letter-spacing: 0.08em; }
 .wm-zi { display: inline-block; box-shadow: inset 0 -0.09em 0 #F59E0B; padding-bottom: 0.08em; }
-.wm-sub { font-size: clamp(1.1rem, 3vw, 1.5rem); font-weight: 700; color: #CBD5E1; letter-spacing: 0.28em; }
+.wm-sub { font-size: clamp(1.05rem, 3vw, 1.5rem); font-weight: 700; color: #CBD5E1; letter-spacing: 0.2em; }
 .hero-lead { font-size: clamp(1.1rem, 2.6vw, 1.45rem); font-weight: 700; margin: 0 0 4px; color: #F1F5F9; }
 .hero-sub { margin: 0 0 28px; color: #CBD5E1; font-size: 1.05rem; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 0; }
@@ -46,13 +50,13 @@
 
 /* 四組特色 */
 .group {
-  position: relative; overflow: hidden; isolation: isolate;
+  position: relative; isolation: isolate;
   color: #F1F5F9; padding: 88px 0 96px;
 }
 .group-bg { inset: -25% 0; z-index: -2; }
 .group-1 .group-bg { background: linear-gradient(180deg, #141E2D, #1B2C46 60%, #223A5E); }
 .group-2 .group-bg { background: linear-gradient(180deg, #223A5E, #2D4D77); }
-.group-3 .group-bg { background: radial-gradient(ellipse at 85% 30%, rgba(245, 158, 11, 0.16), transparent 55%), linear-gradient(180deg, #1D2B44, #141E2D); }
+.group-3 .group-bg { background: radial-gradient(ellipse at 85% 30%, rgba(253, 230, 138, 0.08), transparent 55%), linear-gradient(180deg, #1D2B44, #141E2D); }
 .group-4 .group-bg { background: linear-gradient(180deg, #141E2D, #1A2A44); }
 .group-glyph {
   z-index: -1; right: -0.08em; top: 8%;
@@ -61,14 +65,19 @@
   user-select: none;
 }
 .group-2 .group-glyph { left: -0.06em; right: auto; color: rgba(253, 230, 138, 0.07); }
-.group-3 .group-glyph { color: rgba(245, 158, 11, 0.08); }
-.group-clouds { z-index: -1; right: -40px; top: 10%; width: min(600px, 90vw); }
+.group-3 .group-glyph { color: rgba(253, 230, 138, 0.06); }
+.group-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; }
+.group-head-text { min-width: 0; }
+.group-art { position: relative; flex: 0 1 300px; height: 120px; margin-bottom: 20px; overflow: hidden; overflow: clip; }
+.group-clouds { left: 0; right: 0; top: 10px; }
 .group-clouds svg { display: block; width: 100%; height: auto; }
 .group-inner { position: relative; max-width: 64rem; margin: 0 auto; padding: 0 16px; }
 .group-kicker { margin: 0 0 6px; color: #FDE68A; font-size: 0.9rem; letter-spacing: 0.16em; }
 .home .group h2 { margin: 0 0 24px; font-size: clamp(1.7rem, 4.5vw, 2.4rem); color: #F8FAFC; border-top-color: #F59E0B; }
 .group-lead { color: #CBD5E1; margin: 0 0 14px; }
-.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 16px; }
+.cards { display: grid; grid-template-columns: 1fr; gap: 16px; }
+@media (min-width: 640px) { .cards-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 760px) { .cards-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .card {
   background: rgba(20, 30, 45, 0.62);
   border: 1px solid rgba(147, 197, 253, 0.22);
@@ -93,7 +102,7 @@
 /* 下載 */
 .downloads { padding: 72px 0 40px; }
 .home .downloads h2 { margin-top: 0; }
-.dl-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(14.5rem, 1fr)); gap: 16px; margin: 20px 0; }
+.dl-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(14.5rem, 100%), 1fr)); gap: 16px; margin: 20px 0; }
 .dl-card {
   background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
   padding: 18px 18px 14px; display: flex; flex-direction: column;
@@ -102,7 +111,7 @@
 .dl-card p { margin: 0.3em 0; }
 .dl-version { font-weight: 700; }
 .dl-need { color: var(--muted); font-size: 0.92rem; line-height: 1.6; flex: 1; }
-.dl-need code { white-space: nowrap; }
+.dl-need code { white-space: normal; }
 .dl-button { margin-top: 10px !important; }
 .dl-button img { display: block; height: 56px; width: auto; }
 .dl-links { text-align: center; }
@@ -112,9 +121,11 @@
 .home-plain { padding: 8px 0 24px; }
 .home-plain .home-wrap { max-width: 52rem; }
 
-/* 進場淡入：home.js 加上 .js-motion 才生效 */
-.js-motion .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.6s ease, transform 0.6s ease; }
-.js-motion .reveal.is-in, .js-motion .reveal:focus-within { opacity: 1; transform: none; }
+/* 進場淡入：預設全部可見。home.js 在 html 加 .js-reveal，只把還在視窗下方的卡片標成 .pending，
+   進到畫面或 1.5 秒保險時間到就拿掉。 */
+.js-reveal .reveal { transition: opacity 0.6s ease, transform 0.6s ease; }
+.js-reveal .reveal.pending { opacity: 0; transform: translateY(22px); }
+.js-reveal .reveal.pending:focus-within { opacity: 1; transform: none; }
 
 @media (max-width: 600px) {
   .hero { min-height: 0; }
@@ -122,10 +133,12 @@
   .brandset { gap: 14px; }
   .zhebi { width: 64px; }
   .group { padding: 60px 0 68px; }
-  .cards, .dl-grid { grid-template-columns: 1fr; }
+  .dl-grid { grid-template-columns: 1fr; }
+  .group-art { flex-basis: 140px; height: 64px; margin-bottom: 16px; }
+  .group-clouds { top: 4px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .px { transform: none !important; will-change: auto; }
-  .reveal, .js-motion .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .reveal, .js-reveal .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
 }

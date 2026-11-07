@@ -32,35 +32,49 @@
     }
   }
 
+  var timer = null;
+
+  function showAll() {
+    reveals.forEach(function (el) { el.classList.remove("pending"); });
+    if (io) { io.disconnect(); io = null; }
+    if (timer) { clearTimeout(timer); timer = null; }
+  }
+
   function start() {
     on = true;
-    root.classList.add("js-motion");
     window.addEventListener("scroll", request, { passive: true });
     window.addEventListener("resize", request);
+    // 淡入：卡片預設可見；只有觀察器可用時，才把還在視窗下方的卡片先設成待顯現。
     if ("IntersectionObserver" in window) {
+      root.classList.add("js-reveal");
+      var vh = window.innerHeight;
       io = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) {
           if (e.isIntersecting) {
-            e.target.classList.add("is-in");
-            io.unobserve(e.target);
+            e.target.classList.remove("pending");
+            if (io) io.unobserve(e.target);
           }
         });
       }, { rootMargin: "0px 0px -8% 0px" });
-      reveals.forEach(function (el) { io.observe(el); });
-    } else {
-      reveals.forEach(function (el) { el.classList.add("is-in"); });
+      reveals.forEach(function (el) {
+        if (el.getBoundingClientRect().top > vh) {
+          el.classList.add("pending");
+          io.observe(el);
+        }
+      });
+      // 保險：1.5 秒後不論觀察器有沒有觸發，全部顯現。
+      timer = setTimeout(showAll, 1500);
     }
     update();
   }
 
   function stop() {
     on = false;
-    root.classList.remove("js-motion");
+    showAll();
+    root.classList.remove("js-reveal");
     window.removeEventListener("scroll", request);
     window.removeEventListener("resize", request);
-    if (io) { io.disconnect(); io = null; }
     layers.forEach(function (el) { el.style.transform = ""; });
-    reveals.forEach(function (el) { el.classList.add("is-in"); });
   }
 
   if (!reduce.matches) start();
