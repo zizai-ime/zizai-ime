@@ -37,6 +37,8 @@
 | Android | [1.1.0](https://play.google.com/store/apps/details?id=studio.mosil.ime.zizai)（1.4.0 審查中） | Android 8 以上 | 從 Google Play 安裝，打開字在照畫面上的步驟設定 |
 | iPhone、iPad | [1.1.0](https://apps.apple.com/tw/app/%E5%AD%97%E5%9C%A8-%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95/id6821223548)（1.4.0 審查中） | iOS 17、iPadOS 17 以上 | 從 App Store 安裝，打開字在照畫面上的步驟設定 |
 
+手機版 1.4.0 上架之前，商店上的 1.1.0 只有大易；這一頁寫到手機的四種輸入法、注音打詞與動態字序，都是 1.4.0 的功能。
+
 注音打詞 1.4.0 起五個平台都有；首碼聯想與字彙建議 macOS、Windows、Linux 版有，手機版（Android、iPhone、iPad）沒有。
 
 Windows 版與 Linux 版還沒有數位簽章，安裝前請先照安裝說明核對 SHA-256。Windows 會跳出安全警告；開了「智慧型應用程式控制」或由公司、學校管理的電腦，可能裝不起來，或裝好了也用不了字在。
