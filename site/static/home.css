@@ -58,6 +58,7 @@
 .group-2 .group-bg { background: linear-gradient(180deg, #223A5E, #2D4D77); }
 .group-3 .group-bg { background: radial-gradient(ellipse at 85% 30%, rgba(253, 230, 138, 0.08), transparent 55%), linear-gradient(180deg, #1D2B44, #141E2D); }
 .group-4 .group-bg { background: linear-gradient(180deg, #141E2D, #1A2A44); }
+.group-5 .group-bg { background: linear-gradient(180deg, #2D4D77, #1D2B44); }
 .group-glyph {
   z-index: -1; right: -0.08em; top: 8%;
   font-size: clamp(14rem, 40vw, 30rem); line-height: 1; font-weight: 900;

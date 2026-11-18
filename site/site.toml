@@ -26,35 +26,35 @@ template = "home.html"
 source = "docs/guide-macos.md"
 path = "macos/"
 title = "安裝與使用（macOS）"
-description = "字在 macOS 版的安裝、切換輸入法、打字與選字、字根表、補字、版本與更新，以及解除安裝。"
+description = "字在 macOS 版的安裝、切換輸入法、打字與選字、注音打詞、首碼聯想、字彙建議、字根表、補字、版本與更新，以及解除安裝。"
 nav = "macOS"
 
 [[pages]]
 source = "docs/guide-windows.md"
 path = "windows/"
 title = "安裝與使用（Windows）"
-description = "字在 Windows 版的下載、核對 SHA-256、安裝、切換輸入法、字在設定、解除安裝與目前的限制。"
+description = "字在 Windows 版的下載、核對 SHA-256、安裝、切換輸入法、注音打詞、首碼聯想與字彙建議、字在設定、解除安裝與目前的限制。"
 nav = "Windows"
 
 [[pages]]
 source = "docs/guide-linux.md"
 path = "linux/"
 title = "安裝與使用（Linux）"
-description = "字在 Linux 版的下載與核對、安裝、加入輸入來源（IBus、Fcitx5）、移除與目前的限制。"
+description = "字在 Linux 版的下載與核對、安裝、加入輸入來源（IBus、Fcitx5）、切換輸入法、注音打詞、首碼聯想與字彙建議、動態字序、移除與目前的限制。"
 nav = "Linux"
 
 [[pages]]
 source = "docs/guide-android.md"
 path = "android/"
 title = "安裝與使用（Android）"
-description = "字在 Android 版的系統需求、從 Google Play 安裝、打字與選字、外接鍵盤與目前的限制。"
+description = "字在 Android 版的系統需求、從 Google Play 安裝、輸入法的切換、注音打詞、我的詞庫（注音詞）、動態字序、外接鍵盤與目前的限制。"
 nav = "Android"
 
 [[pages]]
 source = "docs/guide-ios.md"
 path = "ios/"
 title = "安裝與使用（iPhone、iPad）"
-description = "字在 iPhone、iPad 版的系統需求、從 App Store 安裝、新增鍵盤、打字與選字與目前的限制。"
+description = "字在 iPhone、iPad 版的系統需求、從 App Store 安裝、新增鍵盤、輸入法的切換、注音打詞、我的詞庫（注音詞）、動態字序與目前的限制。"
 nav = "iPhone、iPad"
 
 [[pages]]
@@ -68,7 +68,7 @@ nav = "符號表"
 source = "docs/faq.md"
 path = "faq/"
 title = "常見問題"
-description = "字在支援的系統、費用、隱私、資料更新、和其他輸入法的關係與回報問題的方式。"
+description = "字在支援的系統、打詞與聯想、費用、隱私、資料更新、和其他輸入法的關係與回報問題的方式。"
 nav = "常見問題"
 
 [[pages]]
