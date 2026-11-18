@@ -100,6 +100,23 @@
 }
 .methods small { font-weight: 400; color: #CBD5E1; font-size: 0.85rem; }
 
+/* 功能預覽影片：主視覺正下方，和四組特色一樣固定深色底。影片的畫面是淺色紙底，
+   放在有邊框的圓角容器裡，在深色底上不會是一整塊沒有邊界的白。 */
+.group-preview { padding-bottom: 72px; }
+.group-preview .group-bg { background: linear-gradient(180deg, #24416A, #182840 70%, #141E2D); }
+.preview-frame {
+  background: rgba(20, 30, 45, 0.62);
+  border: 1px solid rgba(147, 197, 253, 0.22);
+  border-radius: 14px; padding: 8px;
+}
+.preview-video {
+  display: block; width: 100%; height: auto; aspect-ratio: 16 / 9;
+  border-radius: 8px; background: #F3F5F8;
+}
+.preview-video:focus-visible { outline: 3px solid #FDE68A; outline-offset: 3px; }
+.preview-note { margin: 12px 0 0; font-size: 0.9rem; }
+.preview-note a { white-space: nowrap; }
+
 /* 下載 */
 .downloads { padding: 72px 0 40px; }
 .home .downloads h2 { margin-top: 0; }

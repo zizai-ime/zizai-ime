@@ -30,8 +30,25 @@
     <p class="hero-actions">
       <a class="btn btn-primary" href="#下載">下載</a>
       <a class="btn btn-ghost" href="#特色">看特色</a>
-      <a class="btn btn-ghost" href="https://youtu.be/HSc9Hmme0D4" target="_blank" rel="noopener noreferrer">功能預覽影片</a>
+      <a class="btn btn-ghost" href="#功能預覽影片">功能預覽影片</a>
     </p>
+  </div>
+</section>
+
+<section id="功能預覽影片" class="group group-preview" aria-labelledby="preview-title">
+  <div class="px group-bg" data-speed="-0.12" aria-hidden="true"></div>
+  <div class="group-inner">
+    <h2 id="preview-title">功能預覽影片</h2>
+    <p class="group-lead" id="preview-desc">約半分鐘的手繪動畫：注音打詞、我的詞庫、四種輸入法，以及電腦版的首碼聯想與字彙建議。</p>
+    <div class="preview-frame">
+      <!-- preload="none"：進頁面只載入靜止畫面，按播放才下載影片。不自動播放、不循環；playsinline 讓手機在頁面裡播。 -->
+      <video class="preview-video" controls playsinline preload="none" width="1920" height="1080"
+             poster="${base}assets/preview-1.4-poster.png"
+             aria-labelledby="preview-title" aria-describedby="preview-desc">
+        <source src="${base}assets/preview-1.4.mp4" type="video/mp4">
+      </video>
+    </div>
+    <p class="preview-note"><a href="https://youtu.be/HSc9Hmme0D4" target="_blank" rel="noopener noreferrer">在 YouTube 看</a></p>
   </div>
 </section>
 
