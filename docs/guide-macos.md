@@ -2,6 +2,8 @@
 
 這一頁是 macOS 版。打字、選字、字根表、補字與更新這些各版本相同的部分也寫在這裡；Windows 版、Linux 版的安裝、切換與解除安裝，見 [安裝與使用（Windows）](guide-windows.md) 與 [安裝與使用（Linux）](guide-linux.md)。「注音打詞」「首碼聯想」「字彙建議」三節講的是 macOS 版。Windows 版、Linux 版 1.4.0 也有這三個功能，但有些地方不同，見 [安裝與使用（Windows）](guide-windows.md) 與 [安裝與使用（Linux）](guide-linux.md)；手機版有注音打詞（按法見 [Android](guide-android.md#注音打詞) 與 [iPhone、iPad](guide-ios.md#注音打詞)），沒有首碼聯想與字彙建議。
 
+想先看整體的樣子：[功能預覽影片（手繪動畫，約半分鐘）](https://youtu.be/HSc9Hmme0D4)。
+
 ## 系統需求
 
 macOS 13 以上。

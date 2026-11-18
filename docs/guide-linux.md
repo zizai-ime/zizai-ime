@@ -4,6 +4,8 @@
 
 **請先看這段**：Linux 版的套件沒有 GPG 簽章，也不在各發行版的官方套件庫裡。請只從 GitHub 上 `zizai-ime/zizai-ime` 的 [Releases](https://github.com/zizai-ime/zizai-ime/releases) 下載，安裝前先核對 SHA-256（「下載與核對」的第 2 步）。
 
+想先看整體的樣子：[功能預覽影片（手繪動畫，約半分鐘）](https://youtu.be/HSc9Hmme0D4)。
+
 ## 系統需求
 
 - x86_64（64 位元的 Intel、AMD）電腦。還沒有 ARM64 版。
