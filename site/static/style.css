@@ -14,6 +14,7 @@
   --header-ink: #F1F5F9;
   --tip: #2c7a4b;
   --warn: #a1600b;
+  --scroll-shade: rgba(23, 32, 49, 0.22);
   --font: "PingFang TC", "Noto Sans TC", "Noto Sans CJK TC", "Microsoft JhengHei", system-ui, sans-serif;
   --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   color-scheme: light;
@@ -32,6 +33,7 @@
     --header-ink: #F1F5F9;
     --tip: #6cc497;
     --warn: #f0b45c;
+    --scroll-shade: rgba(0, 0, 0, 0.55);
     color-scheme: dark;
   }
 }
@@ -48,6 +50,7 @@
   --header-ink: #F1F5F9;
   --tip: #6cc497;
   --warn: #f0b45c;
+  --scroll-shade: rgba(0, 0, 0, 0.55);
   color-scheme: dark;
 }
 
@@ -107,12 +110,24 @@ blockquote { margin: 1em 0; padding: 0.2em 1em; border-left: 4px solid var(--lin
 .markdown-alert-warning, .markdown-alert-caution { border-left-color: var(--warn); }
 .markdown-alert-warning .markdown-alert-title, .markdown-alert-caution .markdown-alert-title { color: var(--warn); }
 
-.table-scroll { overflow-x: auto; margin: 1em 0; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+/* 表格放不下時由外層左右捲動，不把欄擠扁。左右兩側的陰影只在還有內容可捲時出現
+   （前兩層跟著內容捲動、蓋住陰影；後兩層固定在容器邊緣）。 */
+.table-scroll {
+  overflow-x: auto; margin: 1em 0; border: 1px solid var(--line); border-radius: 8px;
+  background:
+    linear-gradient(to right, var(--surface) 40%, transparent) left / 32px 100% no-repeat local,
+    linear-gradient(to left, var(--surface) 40%, transparent) right / 32px 100% no-repeat local,
+    radial-gradient(farthest-side at 0 50%, var(--scroll-shade), transparent) left / 12px 100% no-repeat scroll,
+    radial-gradient(farthest-side at 100% 50%, var(--scroll-shade), transparent) right / 12px 100% no-repeat scroll,
+    var(--surface);
+}
 table { border-collapse: collapse; width: 100%; font-size: 0.93rem; line-height: 1.6; }
 th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--line); }
 tr:last-child td { border-bottom: 0; }
 th { color: var(--muted); font-weight: 600; background: var(--bg); }
 td code, th code { overflow-wrap: normal; white-space: nowrap; }
+/* 第一欄是每一列的標籤：中文詞不在字與字之間斷行，只在標點、空格處換行，避免被擠成一行一兩個字。 */
+th:first-child, td:first-child { word-break: keep-all; }
 
 [align="center"] { text-align: center; }
 p[align="center"] a { display: inline-block; margin: 4px 2px; }
