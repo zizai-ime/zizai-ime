@@ -1,6 +1,6 @@
 # 安裝與使用（Windows）
 
-這一頁是 Windows 版的安裝、切換與解除安裝。單字的打法、字根表、補字與更新和 macOS 版相同，見 [安裝與使用](guide-macos.md)；注音打詞、首碼聯想與字彙建議，Windows 版 1.4.0 也有，按法和 macOS 頁的同名各節相同，Windows 版不同的地方見本頁的「注音打詞」「首碼聯想與字彙建議」。
+這一頁是 Windows 版的安裝、切換與解除安裝。單字的打法、字根表、補字與更新和 macOS 版相同，見 [安裝與使用](guide-macos.md)；注音打詞、首碼聯想與字彙建議，Windows 版也有，按法和 macOS 頁的同名各節相同，Windows 版不同的地方見本頁的「注音打詞」「首碼聯想與字彙建議」。
 
 **請先看這段**：Windows 版的安裝程式與輸入法還沒有數位簽章，Windows 會跳出安全警告。開了「智慧型應用程式控制」或由公司、學校管理的電腦，可能裝不起來，或裝好了也用不了字在（見「目前的限制」）。安裝前請先核對 SHA-256（「安裝」的第 2 步）。
 
@@ -8,11 +8,11 @@
 
 ## 下載
 
-Windows 版的最新版本是 1.4.0，更新內容與 SHA-256 見 [字在 1.4.0](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.4.0)。
+Windows 版的最新版本是 1.4.2，更新內容與 SHA-256 見 [字在 1.4.2](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.4.2)。
 
 <p align="center">
-  <a href="https://github.com/zizai-ime/zizai-ime/releases/download/v1.4.0/ZiZai-Win-x64-1.4.0.zip"><img src="images/download-windows-x64.svg" width="187" height="76" alt="下載字在（Windows 10、11，64 位元）"></a>
-  <a href="https://github.com/zizai-ime/zizai-ime/releases/download/v1.4.0/ZiZai-Win-x86-1.4.0.zip"><img src="images/download-windows-x86.svg" width="187" height="76" alt="下載字在（Windows 10，32 位元）"></a>
+  <a href="https://github.com/zizai-ime/zizai-ime/releases/download/v1.4.2/ZiZai-Win-x64-1.4.2.zip"><img src="images/download-windows-x64.svg" width="187" height="76" alt="下載字在（Windows 10、11，64 位元）"></a>
+  <a href="https://github.com/zizai-ime/zizai-ime/releases/download/v1.4.2/ZiZai-Win-x86-1.4.2.zip"><img src="images/download-windows-x86.svg" width="187" height="76" alt="下載字在（Windows 10，32 位元）"></a>
 </p>
 
 - **64 位元**（大多數電腦）：Windows 10、11。32 位元的 App 也能用字在。

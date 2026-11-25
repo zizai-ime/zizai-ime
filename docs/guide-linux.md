@@ -1,6 +1,6 @@
 # 安裝與使用（Linux）
 
-這一頁是 Linux 版的安裝、加入輸入來源與移除。單字的打法、字根表、補字與更新和 macOS 版相同，見 [安裝與使用](guide-macos.md)；注音打詞、首碼聯想與字彙建議，Linux 版 1.4.0 也有，按法和 macOS 頁的同名各節相同，Linux 版不同的地方見本頁的「注音打詞」「首碼聯想與字彙建議」。
+這一頁是 Linux 版的安裝、加入輸入來源與移除。單字的打法、字根表、補字與更新和 macOS 版相同，見 [安裝與使用](guide-macos.md)；注音打詞、首碼聯想與字彙建議，Linux 版也有，按法和 macOS 頁的同名各節相同，Linux 版不同的地方見本頁的「注音打詞」「首碼聯想與字彙建議」。
 
 **請先看這段**：Linux 版的套件沒有 GPG 簽章，也不在各發行版的官方套件庫裡。請只從 GitHub 上 `zizai-ime/zizai-ime` 的 [Releases](https://github.com/zizai-ime/zizai-ime/releases) 下載，安裝前先核對 SHA-256（「下載與核對」的第 2 步）。
 
@@ -18,9 +18,9 @@
 
 ## 下載與核對
 
-Linux 版的最新版本是 1.4.0，更新內容與 SHA-256 見 [字在 1.4.0](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.4.0)。
+Linux 版的最新版本是 1.4.2，更新內容與 SHA-256 見 [字在 1.4.2](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.4.2)。
 
-1. 到 [字在 1.4.0](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.4.0) 下載。檔名裡有發行版的名稱：
+1. 到 [字在 1.4.2](https://github.com/zizai-ime/zizai-ime/releases/tag/v1.4.2) 下載。檔名裡有發行版的名稱：
 
    | 發行版 | 格式 | 檔名裡的字 |
    |---|---|---|
